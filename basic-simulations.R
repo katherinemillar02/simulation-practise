@@ -14,3 +14,9 @@ sample(letters, 4)
 sample(1:10)
 # simple code, will just select 10 numbers 1-10 in a random order 
 
+sample(1:10, replace = TRUE)
+# this means there will be repeats of numbers
+
+# USING DATA SETS ---- 
+library(datasets)
+
