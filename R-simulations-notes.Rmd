@@ -1,0 +1,13 @@
+---
+title: "Simulations in R notes"
+output: pdf_document
+---
+Can be used for: 
+- random number generation
+- random sampling 
+- simulate a system (model random output)
+
+10000 / 250
+
+40 / 12
+
