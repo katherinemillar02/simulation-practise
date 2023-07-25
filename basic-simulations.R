@@ -1,7 +1,10 @@
-# practising some random selection 
+# practicing some random selection 
 
+
+# generating random numbers 
 # random number generator is 1 
 set.seed(1)
+# ensures reproducibility 
 
 # using the sample function 
 sample(1:10, 4)
