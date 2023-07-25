@@ -32,3 +32,33 @@ x <- rnorm(10, 20, 2)
 
 # getting some statistical values 
 summary(x)
+
+# using pnorm() function - evaluate the cumilitive distribution
+# probability of a random normal variable being less than x 
+
+# e.g. using 2 
+pnorm(2)
+
+# SETTING A NUMBER SEED
+
+set.seed(1)
+
+# run it multiple times, will get different numbers each time 
+rnorm(5)
+# where mean is 0 and sd is 1 
+
+# keep running rnorm to get different set of numbers 
+# re-run set.seed again, get same original set of numbers 
+
+# using rpois (discrete data)
+
+rpois(10, 1) #  will give 10 numbers with a mean of 1
+
+rpois(10,2) #  will give 10 numbers with a mean of 2
+
+rpois(10,20) #  will give 10 numbers with a mean of 20
+
+
+# SIMULATING A LINEAR MODEL 
+`
+`
