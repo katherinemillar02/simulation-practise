@@ -67,28 +67,42 @@ set.seed(20) # setting repeatability
 
 # simulating a PREDICTOR variable 
 
+# setting x (the predictor variable)
 x <- rnorm(100) # 100 random numbers with a mean 0, sd 1 
 
+# setting e (?)
 e <- rnorm(200, 0 , 2) # 200 random numbers with a mean 0, sd 2
 
+# working out y - the outcome variable with the worked out x and e 
 y <- 0.5 + 2 * x + e
 
+# generating these values
 summary(y)
 
+# plotting these variables 
 plot(x, y)
 
 
 
 
-# binomial distribution 
-set.seed(10)
+# binomial distribution -----
+set.seed(10) # setting repeatability 
 
+# setting x  but using BINOM instead of normal 
 x <- rbinom(100, 1, 0.5) # n, size, prob
+# instead of mean uses size 
+# instead of sd uses prob 
 
 str(x) # structure of R objects 
 
-e <- rnorm(100, 0, 2)
+# looking for e using normal distribution 
+e <- rnorm(100, 0, 2) # using mean 0, sd 1 
 
+# working out y with new vaqlues
 y <- 0.5 + 2 * x + e 
+
+# plotting binomial data 
+plot(x, y) 
+# keep running to get new results 
 
 
