@@ -114,3 +114,13 @@ set.seed(1)
 # simulate a predictor variable 
 x <- rnorm(100)
 
+# setting log.mu 
+ log.mu <- 0.5 + 0.3 * x 
+
+ # using rpois()
+y <- rpois(100, exp(log.mu))
+
+
+summary(y)
+
+plot(x,y)
