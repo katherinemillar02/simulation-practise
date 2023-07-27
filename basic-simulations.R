@@ -106,3 +106,11 @@ plot(x, y)
 # keep running to get new results 
 
 
+# GENERALISED LINEAR MODELS -- SIMULATIONS 
+
+# set the seed 
+set.seed(1)
+
+# simulate a predictor variable 
+x <- rnorm(100)
+
