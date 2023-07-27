@@ -61,3 +61,12 @@ rpois(10,20) #  will give 10 numbers with a mean of 20
 
 # SIMULATING A LINEAR MODEL 
 `
+# setting the seed 
+
+set.seed(20) # setting repeatability 
+
+# simulating a PREDICTOR variable 
+
+x <- rnorm(100) # 100 random numbers with a mean 0, sd 1 
+
+
