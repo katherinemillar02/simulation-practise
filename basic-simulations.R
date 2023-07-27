@@ -69,4 +69,10 @@ set.seed(20) # setting repeatability
 
 x <- rnorm(100) # 100 random numbers with a mean 0, sd 1 
 
+e <- rnorm(200, 0 , 2) # 200 random numbers with a mean 0, sd 2
 
+y <- 0.5 + 2 * x + e
+
+summary(y)
+
+plot(x, y)
