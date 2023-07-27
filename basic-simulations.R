@@ -61,4 +61,3 @@ rpois(10,20) #  will give 10 numbers with a mean of 20
 
 # SIMULATING A LINEAR MODEL 
 `
-`
