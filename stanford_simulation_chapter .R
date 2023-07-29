@@ -69,4 +69,15 @@ help(replicate)
 
 # trying sapply() instead 
 
+# setting the seed for repeatability 
+set.seed(0)
+
+# using system time to measure code one 
+system.time(
+  x2 <- sapply # simplified version of lapply 
+  (1:replicates, # meaning the values will be from 1: 5000 - determines how many times simulation is repeated
+    function(i) # stand alone function? single function? 
+      {sum(rexp(n = exponentials, rate= rate_parameter))})) 
+
+head(x2)
 
