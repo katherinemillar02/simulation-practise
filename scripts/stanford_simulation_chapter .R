@@ -105,7 +105,13 @@ head(x3)
 set.seed(0)
 
 system.time(
-  x4 <- apply(matrix(rexp(n = exponentials, rate_parameter), nrow = exponentials,), 2, sum)
+  x4 <- apply( # using apply() function 
+    matrix(rexp # matrix() is 
+    (n = exponentials * replicates, rate_parameter), nrow = exponentials,), 2, sum)
 )
 
+# viewing the data 
 head(x4)
+
+
+
