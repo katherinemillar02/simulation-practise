@@ -120,7 +120,39 @@ x <- rnorm(100)
  # using rpois()
 y <- rpois(100, exp(log.mu))
 
-
+# getting results from rpois()
 summary(y)
 
+# plotting the data 
 plot(x,y)
+
+# RANDOM SAMPLING ----
+
+# setting the seed for repeatability 
+set.seed(1)
+
+# using the sample function 
+sample(1:10, 4) # this will select 4 numbers from 1-10
+
+# using this for letters 
+sample(letters, 4)
+# this will select 4 random letters
+
+sample(1:10)
+# simple code, will just select 10 numbers 1-10 in a random order 
+
+sample(1:10, replace = TRUE) # changing the numbers 
+# this means there will be repeats of numbers
+
+
+# adding ones own data 
+
+# reading in packages 
+library (readxl)
+
+# reading in data 
+parkrun <- read_excel("data/ parkrun-times-2.xlsx)
+
+#using ones own data for simulation 
+
+
