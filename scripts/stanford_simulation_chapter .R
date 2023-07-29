@@ -79,5 +79,33 @@ system.time(
     function(i) # stand alone function? single function? 
       {sum(rexp(n = exponentials, rate= rate_parameter))})) 
 
+# viewing the data 
 head(x2)
 
+# trying lapply() function
+# gives in a list instead of simple 
+system.time(
+  x3 <- lapply(
+    1: replicates,
+    function(i)
+    {sum(rexp(n = exponentials, rate = rate_parameter))}
+  )
+)
+
+
+
+# viewing the data 
+head(x3)
+
+# applying a very simple function such as sum() - 
+# make a matrix of all simulations, apply them to the functions appropriatley 
+# use rowSums() and colSums()
+
+# setting seed - so same each time 
+set.seed(0)
+
+system.time(
+  x4 <- apply(matrix(rexp(n = exponentials, rate_parameter), nrow = exponentials,), 2, sum)
+)
+
+head(x4)
