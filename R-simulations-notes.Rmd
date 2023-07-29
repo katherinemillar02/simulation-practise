@@ -2,6 +2,9 @@
 title: "Simulations in R notes"
 output: pdf_document
 ---
+
+Peng Simulation Chapter Notes 
+
 Can be used for: 
 - random number generation
 - random sampling 
