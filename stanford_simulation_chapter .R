@@ -59,5 +59,14 @@ plot_example <- ggplot(data.frame(x1), aes(x1))+
 # frequency disributions 
 # positive distribution  
 
+# LOOKING AT THIS FUNCTION
+
+help(replicate)
+# lapply(), sapply(), vapply()
+# lapply returns a list of the same length as X, each element of which is the result of applying FUN to the corresponding element of X.
+
+# related to functions apply() and tapply()
+
+# trying sapply() instead 
 
 
