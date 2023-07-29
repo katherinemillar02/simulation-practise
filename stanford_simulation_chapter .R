@@ -28,15 +28,36 @@ mean(vector_poission)
 # generate 5 samples from an 'exponential' with a rate parameter 0.1 - sum them together 
 
 replicates <- 5000 # number of replicates 
-exponentials <- 5 # number of exponential
+exponentials <- 5 # number of exponential random variables in simulation 
 rate_parameter <- 0.1 # the rate parameter 
 
 # using set.seed for repeatability 
 set.seed(0)
 
-system.time(
-  x1 <- replicate(
+system.time( # measures execution time of how long code takes to run
+  
+  # from here is actual simulation code
+  # labelling it as 'x1' 
+  x1 <- replicate( # replicate will repeat a given expression
     replicates, sum(rexp(n=exponentials, rate = rate_parameter))
   )
 )
+
+# viewing data 
+head(x1)
+
+# viewing the frequency distribution 
+library(ggplot2)
+
+# making a plot 
+
+plot_example <- ggplot(data.frame(x1), aes(x1))+
+  geom_histogram(aes(y=..density..)) +
+  stat_function(fun=function(x)dgamma(x, shape = exponentials, scale=1/rate),
+                color="red", size=2)
+
+# frequency disributions 
+# positive distribution  
+
+
 
