@@ -151,8 +151,25 @@ sample(1:10, replace = TRUE) # changing the numbers
 library (readxl)
 
 # reading in data 
-parkrun <- read_excel("data/ parkrun-times-2.xlsx)
+parkrun <- read_excel("data/parkrun-times-2.xlsx")
 
-#using ones own data for simulation 
+# using ones own data for simulation 
+head(parkrun)
 
+# creating an index vector which will index the rows of the data frame 
+# will sample directly from that index vector 
 
+# setting the seed for repeatability 
+set.seed(20)
+
+# creating an index vector 
+
+index_vector <- seq_len(nrow(parkrun))
+# seq_len will generate regular sequences 
+# nrow returns the number of rows present
+
+# taking a sample from the index vector 
+index_vector_sample <- sample(index_vector, 6)
+
+parkrun[index_vector_sample, ]
+# gives 6 random rows? 
