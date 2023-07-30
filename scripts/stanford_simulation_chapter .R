@@ -189,3 +189,12 @@ plot_example2 <- ggplot(data.frame(mystery_samples), aes(mystery_samples))+
 
 
 
+population1 <- rnorm(2000000)
+
+population2 <- rnorm(1000000)
+
+combined <- c(population1, population2)
+
+plot_exmaple3 <- 
+ggplot(data.frame(data=c(combined, population1, population2), labels=rep(c("combined", "pop1", "pop2"), c(3e6, 2e6, 1e6))), aes(x=data)) + stat_bin(aes(fill=labels), position="identity", binwidth=0.25, alpha=0.5) + theme_bw()
+
