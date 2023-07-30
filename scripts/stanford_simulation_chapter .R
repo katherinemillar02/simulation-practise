@@ -210,5 +210,9 @@ ggplot(data.frame(data=c(combined), labels=rep(c("combined"), c(3e6))), aes(x=co
 
 # GENERATING RANDOM DNA STRINGS 
 
+# cannot get package 
+# too Base R - 
+
+
                   
                   
