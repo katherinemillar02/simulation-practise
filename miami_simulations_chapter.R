@@ -89,3 +89,21 @@ if_test_4(3)
 
 # testing for negative
 if_test_4(-3)
+
+# CONSIDERING 0 IN THE CODE
+if_test_5 <- function(x) {
+  if (x > 0) {
+    return("positive") } 
+  else if (x < 0) {
+    return("negative") }
+  else if (x == 0) {
+return(" neither positive or negative")
+  }}
+
+# testing the numbers +/-/+- 
+# looking for positive
+if_test_5(4)  
+# looking for negative
+if_test_5(-4)
+# looking for neither positive or negative 
+if_test_5(0)
