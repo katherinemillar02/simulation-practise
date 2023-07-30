@@ -52,11 +52,11 @@ rnorm(5)
 
 # using rpois (discrete data)
 
-rpois(10, 1) #  will give 10 numbers with a mean of 1
+rpois(10, 1) #  will give 10 numbers with lambda 1 
 
-rpois(10,2) #  will give 10 numbers with a mean of 2
+rpois(10,2) #  will give 10 numbers with lambda 2
 
-rpois(10,20) #  will give 10 numbers with a mean of 20
+rpois(10,20) #  will give 10 numbers with lambda 20 
 
 
 # SIMULATING A LINEAR MODEL 
