@@ -184,17 +184,31 @@ plot
 
 plot_example2 <- ggplot(data.frame(mystery_samples), aes(mystery_samples))+
   geom_density(aes(y=..density..)) +
-  stat_function(fun=function(x)dgamma(x, shape = exponentials, scale=1/rate),
-                color="red", size=2)
+  stat_function(fun=function(x)dgamma(x, shape = exponentials, scale=1/rate_parameter),
+                color="GREEN", size=2)
 
 
 
-population1 <- rnorm(2000000)
+# plotting distributions on a plot together 
 
-population2 <- rnorm(1000000)
+# first population
+population1 <- rnorm(2000000) # 20 k n 
 
+# second population
+population2 <- rnorm(1000000) # 10 k n
+
+# combining these together
 combined <- c(population1, population2)
 
+# plot example 3
 plot_exmaple3 <- 
 ggplot(data.frame(data=c(combined, population1, population2), labels=rep(c("combined", "pop1", "pop2"), c(3e6, 2e6, 1e6))), aes(x=data)) + stat_bin(aes(fill=labels), position="identity", binwidth=0.25, alpha=0.5) + theme_bw()
 
+# what histogram shows 
+# -  all normal distriution, but 3 different ones with pop1,2 and combined 
+ggplot(data.frame(data=c(combined), labels=rep(c("combined"), c(3e6))), aes(x=combined)) + stat_bin(aes(fill=labels), position="identity", binwidth=0.25, alpha=0.5) + theme_bw()
+
+# GENERATING RANDOM DNA STRINGS 
+
+                  
+                  
