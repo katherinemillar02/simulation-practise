@@ -108,3 +108,9 @@ if_test_5(-4)
 # looking for neither positive or negative 
 if_test_5(0)
 
+
+# COMPARING STRINGS 
+{
+
+}
+
