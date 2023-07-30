@@ -173,3 +173,4 @@ index_vector_sample <- sample(index_vector, 6)
 
 parkrun[index_vector_sample, ]
 # gives 6 random rows? 
+
