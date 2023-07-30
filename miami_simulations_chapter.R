@@ -1,4 +1,5 @@
-# trying to ensure learning of ?tidyverse? simulations 
+# trying to ensure learning of simulations 
+# do any of these require additional packages? 
 
 # coin as an example 
 coin <- c("heads", "tails")
@@ -16,6 +17,10 @@ sample(groups, size = 1)
 sample(groups, size = 8, replace = TRUE)
 
 # without replace = TRUE 
-sample(groups, size = 8) # does not work 
+sample(groups, size = 8) # does not work - as only two elements to choose from 
+
+# using 'if'
+
+
 
 
