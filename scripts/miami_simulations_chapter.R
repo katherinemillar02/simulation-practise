@@ -110,7 +110,26 @@ if_test_5(0)
 
 
 # COMPARING STRINGS 
-{
+# looking a 'counties'
 
+county <- function(x){
+  if(x=="Somerset"){
+    return("Wells")
+  } else if (x=="Norfolk") {
+    return("Norwich")
+  } else if (x=="London") {
+    return("City of London")
+  } else { 
+    return('IDK!')
+  }
 }
+
+
+students <- tibble(
+  name <- c("Katie", "Georgia", "Aaron"),
+  county <- c("Somerset", 'Norfolk', "London")
+  
+)
+
+students
 
