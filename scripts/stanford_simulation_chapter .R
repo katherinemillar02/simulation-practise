@@ -117,5 +117,21 @@ system.time(
 # viewing the data 
 head(x4)
 
+# loading in more packages 
+library(parallel)
 
+# setting the seed for repeatability 
+set.seed(0)
 
+system.time( 
+  x5 <- mclapply(1:replicates, function(i) {
+    sum(rexp(
+      n = exponentials, rate = rate_parameter
+    ))
+  }
+    
+  )
+)
+
+# viewing the data 
+head(x5)
