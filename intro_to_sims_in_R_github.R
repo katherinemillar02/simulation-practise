@@ -107,4 +107,20 @@ hist(replicate(10, mean(rnorm(10))))
 # run it again get back to original one 
 
 
+# defining sample size 
+# replication (n) and the number of simulation/repeats/replication (nrep)
+# single random sample of normal distribution with n = 10
+
+# setting the seed for repeatability 
+set.seed(10)
+
+# setting rnorm
+x4 <- rnorm(10)
+
+# 
+hist(x4, breaks = 10, col = "black", xlim = c(-4,4))
+ # breaks the data into 10 bins
+# makes the x axis range from - 4 10 4 
+# data only goes up to 2 but there is 10 bins - think this makes sense
+
 
