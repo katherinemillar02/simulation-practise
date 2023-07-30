@@ -60,4 +60,12 @@ rpois(1000, 50)
 # min 0 , max 10 
 runif(30, 0, 10)
 
+# ---- LEARNING TO REPEAT 
 
+# replicate() can be used with n (the amount of times), then the expression
+
+# replicate normal distribution 
+# rnorm with 10 repeats, mean 0, sd 1 
+# repeated 100 times 
+
+replicate(100, rnorm(10))
