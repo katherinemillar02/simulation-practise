@@ -32,3 +32,6 @@ if statement
 - the program executes the statements appearing in the ensuing pair of braces.
 - We call a statement in this form an if statement.
 - Let us see our first example of an if statement, which is a function that returns the sign of a number.
+
+- If a conditional statement contains a return statement and R executes that statement, R skips the remainder of the code in the function.
+- 
