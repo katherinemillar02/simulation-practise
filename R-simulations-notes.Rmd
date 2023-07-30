@@ -10,3 +10,4 @@ Can be used for:
 - random sampling 
 - simulate a system (model random output)
 
+Standford Simulation Chapter Notes 
