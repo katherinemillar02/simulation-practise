@@ -170,11 +170,22 @@ distplot(mystery_samples)
 
 # GENERATING RANDOM MIXTURES OF NORMAL DATA
 
-samplea <- rnorm(1000000)
+samplea <- rnorm(1000000) 
 sampleb <- rnorm(1500000, 3, 1)
 
 combined <- c(samplea, sampleb)
 
 plot <- ggplot(data.frame(combined), aes(x=combined)) + stat_bin(binwidth=0.25, position="identity")
 plot
+
+# two modes? 
+# maybe only one mode 
+
+
+plot_example2 <- ggplot(data.frame(mystery_samples), aes(mystery_samples))+
+  geom_density(aes(y=..density..)) +
+  stat_function(fun=function(x)dgamma(x, shape = exponentials, scale=1/rate),
+                color="red", size=2)
+
+
 
