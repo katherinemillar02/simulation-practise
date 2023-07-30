@@ -113,18 +113,18 @@ system.time(
 # 2 is default usually - so separating another 2 - is 4 
 
 
-
 # viewing the data 
 head(x4)
 
 # loading in more packages 
 library(parallel)
 
-# setting the seed for repeatability 
+# setting the seed for repeat
 set.seed(0)
 
+# using mclapply - will give a list 
 system.time( 
-  x5 <- mclapply(1:replicates, function(i) {
+  x5 <- mclapply(1:replicates, function(i) { # include function in this code 
     sum(rexp(
       n = exponentials, rate = rate_parameter
     ))
@@ -135,3 +135,20 @@ system.time(
 
 # viewing the data 
 head(x5)
+
+
+# GENERATING NORMAL RANDOM VARIABLES 
+
+# genrating samples 
+samples1 <- rnorm(100)
+samples1
+
+
+
+# checking these have mean 0 and sd 1 with qq plot 
+load("data/mystery_samples.RData")
+
+# reading the data in 
+mystery_samples <- samples
+
+head(mystery_samples)
