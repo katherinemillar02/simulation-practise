@@ -118,9 +118,36 @@ set.seed(10)
 x4 <- rnorm(10)
 
 # 
-hist(x4, breaks = 10, col = "black", xlim = c(-4,4))
+hist(x4, breaks = 10, col = "black", xlim = c(-4,4))  
  # breaks the data into 10 bins
 # makes the x axis range from - 4 10 4 
 # data only goes up to 2 but there is 10 bins - think this makes sense
 
+# using abline code - automatically adds line 
+abline(v = 0, col = "red", lty = 2, lwd = 2) # adds straight lines to a plot 
+
+# adds a mean line 
+abline(v = mean(x4), col = "blue", lwd = 2)
+
+# legend explaining 
+legend(
+  0.9, 
+  y = 1.5, 
+  legend = c("mean(x4)", "0"), 
+  lty = c(1, 2), 
+  col = c("blue","red")
+)
+
+# using the repeat function for a certain simulation number 
+
+# setting the seed for repeatability 
+set.seed(10)
+
+# repeating code 
+x5_repeat <- replicate(24, rnorm(10))
+
+# setting parameters
+par(mfrow = c(3,8), mar = c(0,0,0,0))
+
+# visualising this with a plot 
 
