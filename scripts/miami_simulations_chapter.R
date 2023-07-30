@@ -127,12 +127,17 @@ county <- function(x){
 # loading tidyverse package to try tibb;e 
 library(tidyverse)
 
-
+# making a tibble 
 students <- tibble(
   name <- c("Katie", "Georgia", "Aaron"),
   county <- c("Somerset", 'Norfolk', "London")
   
 )
 
+# running the tibble 
 students
+
+# annotating a tibble using purr()
+students <- 
+  mutate(county = map_chr(city, county))
 
