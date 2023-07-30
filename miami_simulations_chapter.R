@@ -74,6 +74,18 @@ if_test_3(-2)
 # getting a print value - as 0 will not give a value
 print(if_test_3(0))
 
+# trying an IF ELSE function
 
+if_test_4 <- function(x) {
+  if ( x > 0) {
+    return("positive")
+  } else if (x < 0) { # otherwise instead of another function
+    return("negative")
+  }
+}
 
+# testing for positive 
+if_test_4(3)
 
+# testing for negative
+if_test_4(-3)
