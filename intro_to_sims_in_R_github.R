@@ -67,5 +67,44 @@ runif(30, 0, 10)
 # replicate normal distribution 
 # rnorm with 10 repeats, mean 0, sd 1 
 # repeated 100 times 
-
 replicate(100, rnorm(10))
+
+# breaking it down 
+# normal distribution 10 values 
+rnorm(10)
+
+# giving one mean of these 10 values
+mean(rnorm(10))
+
+# 10 repeats of 100 rnorm values 
+replicate(10, rnorm(100))
+
+# making a histogram of this distribution 
+hist(replicate(10, rnorm(100)))
+
+# replicate 1000 times the mean of 10 values drawn from a uniform distribution between 0 and 10  
+replicate(1000, mean(runif(10, 0, 10)))
+
+# viewing this in a histogram
+hist(replicate(1000, mean(runif(10, 0, 10))))
+
+# LEARNING TO SET THE SEED 
+
+# without the seed set? 
+
+# setting seed for repeatability 
+set.seed(10)
+
+# using histograms as an example 
+hist(replicate(10, mean(rnorm(10))))
+# you get a different one each time as seed is set 
+
+
+# setting seed for repeatability 
+set.seed(10)
+
+hist(replicate(10, mean(rnorm(10))))
+# run it again get back to original one 
+
+
+
