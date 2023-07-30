@@ -41,3 +41,36 @@ if statement
 - it would be more natural to say 
 - “otherwise, if x is less than 0, it is negative”.
 - We can express “otherwise” using the keyword else. Let’s revise the above code
+
+
+Parker Simulation Chapter 
+- simulating a sample from common probability distributions
+- simulation experiments for sampling distributions
+ - simulation experiments for type I error rates and power calculations.
+- For those interested in more complex applications of simulation, we will also provide (though not cover in class)
+
+- simulating from non-standard distributions (Accept-Reject and MCMC)
+- simulation experiment from a SIR epidemic model.
+
+- Sometimes you want to generate data from a distribution (such as normal),
+- or want to see where a value falls in a known distribution. R has these distributions built in:
+
+-Normal
+-Binomial
+-Beta
+-Exponential
+-Gamma
+-Hypergeometric
+-.........and many more in both base R and other add on packages.
+
+- Each family of functions for a distribution has 4 options:
+
+- r for random number generation [e.g. rnorm()]
+- d for density [e.g. dnorm()]
+- p for probability [e.g. pnorm()]
+ - q for quantile [e.g. qnorm()]
+ - For example, we can simulate a random sample of size 5 from a standard normal distribution by using rnorm.
+ 
+ 
+ - To find the probability of being less than 5 in a Normal distribution with mean 4 and standard deviation 2, we would use pnorm.
+ - the code they show is wrong?
