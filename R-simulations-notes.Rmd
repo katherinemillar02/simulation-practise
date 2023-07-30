@@ -34,4 +34,10 @@ if statement
 - Let us see our first example of an if statement, which is a function that returns the sign of a number.
 
 - If a conditional statement contains a return statement and R executes that statement, R skips the remainder of the code in the function.
-- 
+
+
+
+- Instead of saying “if x is less than 0, it is negative”, 
+- it would be more natural to say 
+- “otherwise, if x is less than 0, it is negative”.
+- We can express “otherwise” using the keyword else. Let’s revise the above code
