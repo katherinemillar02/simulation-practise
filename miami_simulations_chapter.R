@@ -15,5 +15,7 @@ sample(groups, size = 1)
 # selecting eight of kick or receive 
 sample(groups, size = 8, replace = TRUE)
 
+# without replace = TRUE 
+sample(groups, size = 8) # does not work 
 
 
