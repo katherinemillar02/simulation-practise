@@ -56,6 +56,23 @@ if_test_2(0)
 print(if_test_2(-0.1))
 # negative as is less than 0 
 
+if_test_3 <- function(x) {
+  if (x > 0) {
+    return("positive")
+  }
+  if (x < 0) {
+    return("negative")
+  }
+}
+
+# testing the function for positive
+if_test_3(2)
+
+# testing the function for negative
+if_test_3(-2)
+
+# getting a print value - as 0 will not give a value
+print(if_test_3(0))
 
 
 
