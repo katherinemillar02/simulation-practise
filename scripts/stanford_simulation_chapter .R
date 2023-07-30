@@ -151,4 +151,18 @@ load("data/mystery_samples.RData")
 # reading the data in 
 mystery_samples <- samples
 
-head(mystery_samples)
+head(mystery_samples) # gives first n values 
+
+# 
+hist(mystery_samples)
+
+plot_example <- ggplot(data.frame(mystery_samples), aes(mystery_samples))+
+  geom_histogram(aes(y=..density..)) +
+  stat_function(fun=function(x)dgamma(x, shape = exponentials, scale=1/rate),
+                color="red", size=2)
+
+# normal distribution? 
+library(vcd)
+
+# working out which distribution the samples come from 
+distplot(mystery_samples)
