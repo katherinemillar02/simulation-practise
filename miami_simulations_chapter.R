@@ -20,7 +20,24 @@ sample(groups, size = 8, replace = TRUE)
 sample(groups, size = 8) # does not work - as only two elements to choose from 
 
 # using 'if'
+if_test <- function(x) {
+  if (x > 0 ) {
+    return("positive")
+  }
+}
+
+if_test(3)
 
 
+print(if_test(-3))
 
 
+if_test_2 <- function(x) {
+  if ( x >= 0) {
+    return("positive")
+  }
+}
+
+if_test_2(0)
+
+if_test_2(0.1)
