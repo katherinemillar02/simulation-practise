@@ -23,4 +23,12 @@ if statement
 - program unit is a conditional statement 
 - selection of action from multiple possibilities 
 - use different lines 
-- 
+- Conditional statements usually reside inside a function. 
+-express alternative behavior depending on argument values.
+- a conditional statement begins with an if header
+- What appears after the keyword is a pair of parentheses, in which a condition to examine appears. - After the condition part appears an action to perform, which is a series of statements flanked by a pair of curly braces.
+
+- The syntax specifies that if the condition inside the pair of parentheses is true,
+- the program executes the statements appearing in the ensuing pair of braces.
+- We call a statement in this form an if statement.
+- Let us see our first example of an if statement, which is a function that returns the sign of a number.
