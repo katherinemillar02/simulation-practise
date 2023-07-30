@@ -104,11 +104,15 @@ head(x3)
 # setting seed - so same each time 
 set.seed(0)
 
-system.time(
+# apply will apply the function to specified margins within the matrix 
+system.time( 
   x4 <- apply( # using apply() function 
-    matrix(rexp # matrix() is 
-    (n = exponentials * replicates, rate_parameter), nrow = exponentials,), 2, sum)
-)
+    matrix( # matrix() is __ filled with random numbers from a exponential distribution - should give columns 
+      rexp(n = exponentials * replicates, rate = rate_parameter),nrow = exponentials,) ,# will generate exp * reps with specified rate parameter 
+       2, sum)) # applies sum function to columns of matrix 
+# 2 is default usually - so separating another 2 - is 4 
+
+
 
 # viewing the data 
 head(x4)
