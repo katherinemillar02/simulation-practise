@@ -11,3 +11,16 @@ Can be used for:
 - simulate a system (model random output)
 
 Standford Simulation Chapter Notes 
+
+miami
+
+if function 
+- take a certain action based on the outcome of an event
+- looking at conditional statements
+- logical data in binary 
+
+if statement 
+- program unit is a conditional statement 
+- selection of action from multiple possibilities 
+- use different lines 
+- 
