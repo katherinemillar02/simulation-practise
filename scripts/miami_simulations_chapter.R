@@ -124,7 +124,9 @@ county <- function(x){
   }
 }
 
-county(Somerset)
+# loading tidyverse package to try tibb;e 
+library(tidyverse)
+
 
 students <- tibble(
   name <- c("Katie", "Georgia", "Aaron"),
