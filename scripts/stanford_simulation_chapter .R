@@ -166,3 +166,15 @@ library(vcd)
 
 # working out which distribution the samples come from 
 distplot(mystery_samples)
+
+
+# GENERATING RANDOM MIXTURES OF NORMAL DATA
+
+samplea <- rnorm(1000000)
+sampleb <- rnorm(1500000, 3, 1)
+
+combined <- c(samplea, sampleb)
+
+plot <- ggplot(data.frame(combined), aes(x=combined)) + stat_bin(binwidth=0.25, position="identity")
+plot
+
