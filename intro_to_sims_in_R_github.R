@@ -151,3 +151,21 @@ par(mfrow = c(3,8), mar = c(0,0,0,0))
 
 # visualising this with a plot 
 
+# using apply() function 
+
+x5_plot <- apply(
+  x5_repeat,
+  2,
+  function(x) {
+    # for fairly simple functions with lots of arguments, we sometimes just cram them all on the same line.
+    # it's not great practice but it stops the script getting super long when dealing with graphical objects
+    hist(x, col = "grey", xlim = c(-5,5), ylim = c(0,7), breaks = c(-5:5),
+         main = "", ylab = "", xlab = "", xaxt = "n", yaxt = "n")
+    abline(v = mean(x), col = "blue", lwd = 2)
+    abline(v = 0, col = "red", lty = 2, lwd = 2)
+  }
+)
+
+# trying to plot with x5 data 
+
+
