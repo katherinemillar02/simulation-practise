@@ -124,6 +124,7 @@ county <- function(x){
   }
 }
 
+county(Somerset)
 
 students <- tibble(
   name <- c("Katie", "Georgia", "Aaron"),
