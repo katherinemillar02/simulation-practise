@@ -42,6 +42,35 @@ if statement
 - “otherwise, if x is less than 0, it is negative”.
 - We can express “otherwise” using the keyword else. Let’s revise the above code
 
+ 
+ General description of if statement 
+ if (<expression>) {
+    <body>
+} else if (<expression>) {
+    <body>
+} else if (<expression>) {
+    <body>
+...
+} else {
+    <body>
+}
+
+else means otherwise 
+else and if = else if 
+ We can stack up else if blocks after an initial if to define a series of alternative options.
+ 
+ 
+
+- An if-block cannot begin with an else in the series.
+- There must exist one if clause.
+- When a series of else if blocks appear after an if, this represents a series of alternatives.
+- We   call this an if sequence.
+- An if without a preceding else begins a new if sequence.
+- R scans all the conditions appearing in an if sequence takes an action when it finds a condition that evaluates to TRUE. All other actions before and after the matching one are ignored.
+- The else block is optional; it takes care of everything that does not have a match.
+
+Comparing strings 
+
 
 Parker Simulation Chapter 
 - simulating a sample from common probability distributions
@@ -74,3 +103,4 @@ Parker Simulation Chapter
  
  - To find the probability of being less than 5 in a Normal distribution with mean 4 and standard deviation 2, we would use pnorm.
  - the code they show is wrong?
+ 
