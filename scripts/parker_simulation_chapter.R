@@ -35,15 +35,25 @@ triangle_frame <-
                                x_sample = runif(301, 0, 2),
 # X (generates uniform distribution, 301 values, min = 0, max = 2 )
                                y_sample = runif(301, 0, 1))
-# Y (generates uniform distribution, 301 values, min 0, max = 2)
+# Y (generates uniform distribution, 301 values, min 0, max = 1)
 
 
 # loading ggplot package to visualise this simulation 
 library(ggplot2)
 
 # to plot? 
+triangle_plot <- 
+ggplot(triangle_frame, aes(x = x, y = y)) +
+# first line of ggplot code: give generated data, then x and y within the generated data
+# x = seq(-0.5, 2.5, by = 0.01)
+# y = y = triangle(seq(-0.5, 2.5, by = 0.01))
+# difference between x ans y? 
+  geom_line() + xlab ("x") + ylab ("y") +
+  geom_segment(aes(x = 0,  y = 0, xend = 0, yend = 1), linetype = "dashed") +
+  geom_segment(aes(x = 0, y = 1, xend = 2, yend = 1), linetype = "dashed") + 
+  geom_segment(aes(x = 2, y = 1, xend = 2, yend = 0), linetype = "dashed") + 
+  geom_point(aes(x = x_sample, y = y_sample), shape = 1)
 
 
-
-
+# not so much a 'triangle' 
 
