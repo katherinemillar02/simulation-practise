@@ -200,7 +200,20 @@ set.seed(10)
 
 # making the code 
 x6 <- replicate(24, rnorm(1000))
-
+# parallel // split
 par(mfrow = c(1,2), mar = c(5,5,1,1))
+
+
+# x6 plot 
+# apply function with histogram and adding ablines
+x6_plot <-
+  apply(x6, 2,
+        function(x) {
+          hist(x, col = "green", xlim = c(-5,5), ylim = c(0, 500), breaks = c(-5:5),
+               main = "", ylan = "", xlab = "", xaxt = "n", yaxt = "n")
+          abline(v = mean(x), col = "red", lwd = 2)
+          abline(v = 0, col = "yellow", lty = 2, lwd = 2)
+        } )
+
 
 
