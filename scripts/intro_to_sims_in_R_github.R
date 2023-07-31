@@ -169,6 +169,26 @@ x5_plot <- apply(
 # trying to plot with x5 data ??
 # need to work on this one 
 
+par(
+  # parameter function 
+  # multiple plots on a single device 
+  mfrow = c(1,2), 
+  # the layout of the plots 
+  # single row and two columns of plots
+  mar = c(5,5,1,1))
+  # margins around the plotting area 
 
+# this code sets the layout for the histogram etc 
 
+hist(apply(x5_repeat, 2, mean), main = "Mean", col = "grey", xlim = c(-1,1))
+# making a histogram with x5 data 
+
+abline(v = 0, col = "green", lty = 2, lwd = 2)
+# adding line at 0 
+
+hist(apply(x5_repeat, 2, sd), main = "SD",col = "grey", xlim = c(0.6,1.4))
+# adding the standard deviation of the data 
+
+abline(v = 1, col = "red", lty = 2, lwd = 2)
+# adding line at one of the sd 
 
