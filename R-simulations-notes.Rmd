@@ -104,3 +104,19 @@ Parker Simulation Chapter
  - To find the probability of being less than 5 in a Normal distribution with mean 4 and standard deviation 2, we would use pnorm.
  - the code they show is wrong?
  
+ 
+ sampling from complex dsitributions /.
+- There are numerous techniques to sample from complex probability distributions.
+- Some of these techniques are specifically employed to generate samples from the 'r' functions demonstrated in the preceding section.
+- two fundamental techniques: the accept-reject algorithm and the Metropolis-Hastings Markov Chain Monte Carlo (MCMC) algorithm.
+- can look at mathematical probability, such as STA 4321
+- Introduction to Probability, for comprehensive comprehension.
+
+ 
+ 
+ LEARNING THE ACCEPT REJECT ALGORITHIM 
+- The accept-reject algorithm generates random samples from a probability distribution using a proposal sample from an easy-to-sample "envelope" distribution.
+- It involves deciding whether to accept or reject the generated proposal sample.
+- A simple example to illustrate this method is considered with a continuous random variable X, concentrated on the interval (0,2).
+- Points P1, P2, ..., are uniformly and randomly sprinkled under the density function of X.
+- The random points Pt are represented as two-dimensional random variables (Xi, Yi), where Xi and Yi are the random coordinates of the ith point.
