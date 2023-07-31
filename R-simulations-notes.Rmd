@@ -110,10 +110,7 @@ Parker Simulation Chapter
 - Some of these techniques are specifically employed to generate samples from the 'r' functions demonstrated in the preceding section.
 - two fundamental techniques: the accept-reject algorithm and the Metropolis-Hastings Markov Chain Monte Carlo (MCMC) algorithm.
 - can look at mathematical probability, such as STA 4321
-- Introduction to Probability, for comprehensive comprehension.
-
- 
- 
+- Introduction to Probability, for comprehe
  LEARNING THE ACCEPT REJECT ALGORITHIM 
 - The accept-reject algorithm generates random samples from a probability distribution using a proposal sample from an easy-to-sample "envelope" distribution.
 - It involves deciding whether to accept or reject the generated proposal sample.
