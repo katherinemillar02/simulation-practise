@@ -192,3 +192,15 @@ hist(apply(x5_repeat, 2, sd), main = "SD",col = "grey", xlim = c(0.6,1.4))
 abline(v = 1, col = "red", lty = 2, lwd = 2)
 # adding line at one of the sd 
 
+
+## 24 simulations of same distribution //  n = 1000
+
+# setting the seed for repeatbaility 
+set.seed(10)
+
+# making the code 
+x6 <- replicate(24, rnorm(1000))
+
+par(mfrow = c(1,2), mar = c(5,5,1,1))
+
+
