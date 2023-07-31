@@ -4,7 +4,7 @@ This is my github repistory for learning and going through certain simulation ch
 
 ## Scripts 
 
-1. script name: **__peng_simulation_chapter.R__**      
+__1.__ script name: **__peng_simulation_chapter.R__**      
 link to workbook: https://bookdown.org/rdpeng/rprogdatascience/simulation.html      
 Released: 2022-05-31 Roger D. Peng     
 Workbook: "R Programming for Data Science"     
@@ -14,7 +14,7 @@ Simulation Chapter (Chapter 20) covers:
 - Simulating a linear model: simulating values from a specific model
 - Random Sampling: taking from specified objects 
 
-2. script name: **__stanford_simulation_chapter.R__**       
+__2.__ script name: **__stanford_simulation_chapter.R__**       
 link to workbook: https://web.stanford.edu/class/bios221/labs/simulation/Lab_3_simulation.html    
 Released: 11/05/2023 (Last Updated) Stanford University 
 Workbook: "Lab 3: Simulations in R"   
@@ -29,7 +29,7 @@ This covers:
 - Generating information of power of statistical tests 
 
 
-3. script name: **__parker_simulation_chapter.R__**       
+__3.__ script name: **__parker_simulation_chapter.R__**       
 link to workbook: https://users.phhp.ufl.edu/rlp176/Courses/PHC6089/R_notes/simulations.html#standard-probability-distributions    
 Released: 2020-08-31 Dr. Robert Parker       
 Workbook: "Introduction to R, lecture Notes"
@@ -38,7 +38,7 @@ Simulation Chapter (Chapter 13) covers:
 - Sampling from complex distributions (accept-reject, student's t-test)
 - Doing simulations from studies and experiments (including from models)
 
-4. script name: **__intro_to_sims_in_R_github.R__**     
+__4.__ script name: **__intro_to_sims_in_R_github.R__**     
 link to workbook: https://github.com/MalikaIhle/Introduction-Simulations-in-R    
 Released: 14/12/2022 Malika Ihle                
 Workbook: "Introduction to Simulations in R" (GitHub Workbook)
@@ -49,7 +49,7 @@ This covers:
 - Simulating for a preregistration
 
 
-5. script name: **__miami_simulations_chapter.R__**     
+__5.__ script name: **__miami_simulations_chapter.R__**     
 link to workbook: https://ds4world.cs.miami.edu/building-simulations.html     
 Released: 2021  - University of Miami                   
 Workbook: “Exploring Data Science with R and the Tidyverse: A Concise Introduction”        
