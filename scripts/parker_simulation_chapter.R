@@ -1,5 +1,6 @@
 # beginning with rnorm function 
 
+
 rnorm(5) # 5 numbers with a mean of 0, sd of 1
 
 # FINDING THE PROBAILITY INSTEAD OF RANDOM
@@ -38,6 +39,10 @@ triangle_frame <-
 
 # loading ggplot package to visualise this simulation 
 library(ggplot2)
+
+# to plot? 
+
+
 
 
 
