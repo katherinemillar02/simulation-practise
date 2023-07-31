@@ -4,7 +4,7 @@ This is my github repistory for learning and going through certain simulation ch
 
 ## Scripts 
 
-*_peng_simulation_chapter.R_*      
+**__peng_simulation_chapter.R__**      
 
 https://bookdown.org/rdpeng/rprogdatascience/simulation.html      
 Released: 2022-05-31 Roger D. Peng     
