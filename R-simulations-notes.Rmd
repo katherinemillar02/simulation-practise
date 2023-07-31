@@ -1,119 +1,51 @@
----
-title: "Simulations in R notes"
-output: pdf_document
----
+**Peng Simulation Chapter Notes**
 
-Peng Simulation Chapter Notes 
+#### Simulations can be used for:
+Random number generation
+Random sampling
+Simulate a system to model random output
 
-Can be used for: 
-- random number generation
-- random sampling 
-- simulate a system (model random output)
+**Stanford Simulation Chapter Notes:**
 
-Standford Simulation Chapter Notes 
+**Miami Simulation Chapter Notes:**
+The if function:
+Take a certain action based on the outcome of an event
+Looking at conditional statements
+Logical data in binary
+if statement:
+A program unit that is a conditional statement
+Selection of action from multiple possibilities using different lines
+Conditional statements usually reside inside a function
+Express alternative behavior depending on argument values
+A conditional statement begins with an if header followed by a condition to examine in parentheses
+After the condition, there's an action to perform enclosed in curly braces
+If the condition is true, the program executes the statements inside the braces, making it an if statement
+If a conditional statement contains a return statement, and it executes, the rest of the code in the function is skipped
+General description of if statement:
+RCopy code
+if (<expression>) { <body> } else if (<expression>) { <body> } else if (<expression>) { <body> ... } else { <body> } 
+The else means "otherwise"
+We can stack up else if blocks after an initial if to define a series of alternative options
+An if-block cannot begin with an else in the series
+There must exist one if clause
+When a series of else if blocks appear after an if, this represents a series of alternatives, called an if sequence
+An if without a preceding else begins a new if sequence
+R scans all the conditions in an if sequence and takes action when it finds a condition that evaluates to TRUE. All other actions before and after the matching one are ignored
+The else block is optional and takes care of everything that does not have a match
+Comparing strings:
 
-miami
-
-if function 
-- take a certain action based on the outcome of an event
-- looking at conditional statements
-- logical data in binary 
-
-if statement 
-- program unit is a conditional statement 
-- selection of action from multiple possibilities 
-- use different lines 
-- Conditional statements usually reside inside a function. 
--express alternative behavior depending on argument values.
-- a conditional statement begins with an if header
-- What appears after the keyword is a pair of parentheses, in which a condition to examine appears. - After the condition part appears an action to perform, which is a series of statements flanked by a pair of curly braces.
-
-- The syntax specifies that if the condition inside the pair of parentheses is true,
-- the program executes the statements appearing in the ensuing pair of braces.
-- We call a statement in this form an if statement.
-- Let us see our first example of an if statement, which is a function that returns the sign of a number.
-
-- If a conditional statement contains a return statement and R executes that statement, R skips the remainder of the code in the function.
-
-
-
-- Instead of saying “if x is less than 0, it is negative”, 
-- it would be more natural to say 
-- “otherwise, if x is less than 0, it is negative”.
-- We can express “otherwise” using the keyword else. Let’s revise the above code
-
- 
- General description of if statement 
- if (<expression>) {
-    <body>
-} else if (<expression>) {
-    <body>
-} else if (<expression>) {
-    <body>
-...
-} else {
-    <body>
-}
-
-else means otherwise 
-else and if = else if 
- We can stack up else if blocks after an initial if to define a series of alternative options.
- 
- 
-
-- An if-block cannot begin with an else in the series.
-- There must exist one if clause.
-- When a series of else if blocks appear after an if, this represents a series of alternatives.
-- We   call this an if sequence.
-- An if without a preceding else begins a new if sequence.
-- R scans all the conditions appearing in an if sequence takes an action when it finds a condition that evaluates to TRUE. All other actions before and after the matching one are ignored.
-- The else block is optional; it takes care of everything that does not have a match.
-
-Comparing strings 
+**Parker Simulation Chapter:**
+Simulating a sample from common probability distributions
+Simulation experiments for sampling distributions
+Simulation experiments for type I error rates and power calculations
+For more complex applications of simulation, they will provide (though not cover in class):
+Simulating from non-standard distributions (Accept-Reject and MCMC)
+Simulation experiment from an SIR epidemic model
+Sampling from complex distributions:
+There are numerous techniques to sample from complex probability distributions
+Some of these techniques are specifically employed to generate samples from the 'r' functions demonstrated in the preceding section
+Two fundamental techniques are the accept-reject algorithm and the Metropolis-Hastings Markov Chain Monte Carlo (MCMC) algorithm
+Learning the Accept-Reject Algorithm: It generates random samples from a probability distribution using a proposal sample from an easy-to-sample "envelope" distribution. It involves deciding whether to accept or reject the generated proposal sample.
+A simple example to illustrate this method considers a continuous random variable X, concentrated on the interval (0, 2). Points P1, P2, ..., are uniformly and randomly sprinkled under the density function of X. The random points Pt are represented as two-dimensional random variables (Xi, Yi), where Xi and Yi are the random coordinates of the ith point.
 
 
-Parker Simulation Chapter 
-- simulating a sample from common probability distributions
-- simulation experiments for sampling distributions
- - simulation experiments for type I error rates and power calculations.
-- For those interested in more complex applications of simulation, we will also provide (though not cover in class)
-
-- simulating from non-standard distributions (Accept-Reject and MCMC)
-- simulation experiment from a SIR epidemic model.
-
-- Sometimes you want to generate data from a distribution (such as normal),
-- or want to see where a value falls in a known distribution. R has these distributions built in:
-
--Normal
--Binomial
--Beta
--Exponential
--Gamma
--Hypergeometric
--.........and many more in both base R and other add on packages.
-
-- Each family of functions for a distribution has 4 options:
-
-- r for random number generation [e.g. rnorm()]
-- d for density [e.g. dnorm()]
-- p for probability [e.g. pnorm()]
- - q for quantile [e.g. qnorm()]
- - For example, we can simulate a random sample of size 5 from a standard normal distribution by using rnorm.
- 
- 
- - To find the probability of being less than 5 in a Normal distribution with mean 4 and standard deviation 2, we would use pnorm.
- - the code they show is wrong?
- 
- 
- sampling from complex dsitributions /.
-- There are numerous techniques to sample from complex probability distributions.
-- Some of these techniques are specifically employed to generate samples from the 'r' functions demonstrated in the preceding section.
-- two fundamental techniques: the accept-reject algorithm and the Metropolis-Hastings Markov Chain Monte Carlo (MCMC) algorithm.
-- can look at mathematical probability, such as STA 4321
-- Introduction to Probability, for comprehe
- LEARNING THE ACCEPT REJECT ALGORITHIM 
-- The accept-reject algorithm generates random samples from a probability distribution using a proposal sample from an easy-to-sample "envelope" distribution.
-- It involves deciding whether to accept or reject the generated proposal sample.
-- A simple example to illustrate this method is considered with a continuous random variable X, concentrated on the interval (0,2).
-- Points P1, P2, ..., are uniformly and randomly sprinkled under the density function of X.
-- The random points Pt are represented as two-dimensional random variables (Xi, Yi), where Xi and Yi are the random coordinates of the ith point.
