@@ -54,6 +54,12 @@ ggplot(triangle_frame, aes(x = x, y = y)) +
   geom_segment(aes(x = 2, y = 1, xend = 2, yend = 0), linetype = "dashed") + 
   geom_point(aes(x = x_sample, y = y_sample), shape = 1)
 
+triangle_plot
 
 # not so much a 'triangle' 
 
+# probaility density function
+# accept - reject 
+accept_reject <- function(fx, n = 100) {
+  
+}
