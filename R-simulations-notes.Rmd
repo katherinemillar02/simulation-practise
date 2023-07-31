@@ -49,3 +49,16 @@ Learning the Accept-Reject Algorithm: It generates random samples from a probabi
 A simple example to illustrate this method considers a continuous random variable X, concentrated on the interval (0, 2). Points P1, P2, ..., are uniformly and randomly sprinkled under the density function of X. The random points Pt are represented as two-dimensional random variables (Xi, Yi), where Xi and Yi are the random coordinates of the ith point.
 
 
+-	Getting random points by simulating an envelope region
+-	we can’t simulate directly from fX, 
+-	simulate from another “envelope” distribution with density h that we can simulate from.
+-	 example 
+-	 h=0.5,0<x<2, 
+-	the density of the uniform distribution on (0,2)
+-	let k be such that kh≥fX 
+-	let  Y∼U(0,kh(X))
+-	given X, then (X,Y) will be uniformly distributed over the region defined by the area below the curve kh. 
+-	 example : k=2
+-	 only want the points under the true density, so we accept X values if Y<fX(X) and reject them otherwise.
+
+
