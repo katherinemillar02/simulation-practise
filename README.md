@@ -4,11 +4,12 @@ This is my github repistory for learning and going through certain simulation ch
 
 ## Scripts 
 
-peng_simulation_chapter.R
-https://bookdown.org/rdpeng/rprogdatascience/simulation.html
-Released: 2022-05-31 Roger D. Peng
-Workbook: "R Programming for Data Science"
-Simulation Chapter (Chapter 20) covers
+*peng_simulation_chapter.R*      
+
+https://bookdown.org/rdpeng/rprogdatascience/simulation.html      
+Released: 2022-05-31 Roger D. Peng     
+Workbook: "R Programming for Data Science"     
+Simulation Chapter (Chapter 20) covers   
 - Random Number Generator
 - Setting the seed: controls randomness or repeatability
 - Simulating a linear model: simulating values from a specific model
