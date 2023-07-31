@@ -60,6 +60,16 @@ triangle_plot
 
 # probaility density function
 # accept - reject 
-accept_reject <- function(fx, n = 100) {
-  
+accept_reject <- function(fx, n = 100) { 3 # probaility density function, 100 times 
+  x = numeric(n) # value of x, no data yet here though
+  count = 0 # count will have value of 0 - count: counter 
+}
+
+
+while(count < n){  # count of 0 < n - while = loop syntax 
+  temp <-  runif(1, 0, 2) 
+  # labelling temp as a generated single value of a random uniform distribution with a min = 0 , max = 2
+  y <- runif(1,0,2)
+  # labelling y as a generated single value of a random uniform distribution with a min = 0 , max = 2
+  if (y < fx(temp)) {}
 }
