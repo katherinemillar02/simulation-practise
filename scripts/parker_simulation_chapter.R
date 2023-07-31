@@ -1,6 +1,7 @@
 # beginning with rnorm function 
 
 
+
 rnorm(5) # 5 numbers with a mean of 0, sd of 1
 
 # FINDING THE PROBAILITY INSTEAD OF RANDOM
