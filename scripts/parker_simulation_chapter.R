@@ -58,26 +58,32 @@ triangle_plot
 
 # not so much a 'triangle' 
 
+library(AR) # accept reject package in R 
+
 # probaility density function
-# accept - reject 
+# accept - reject sampling 
 accept_reject <- function(fx, n = 100) { 
   # probaility density function, 100 times 
-  x = numeric(n) # value of x, no data yet here though
-  count = 0 # count will have value of 0 - count: counter 
+  x <- numeric(n) # value of x, no data yet here though
+  count <- 0 # count will have value of 0 - count: counter 
 while(count < n) {  # count of 0 < n - while = loop syntax 
   temp <-  runif(1, 0, 2) 
   # labelling temp as a generated single value of a random uniform distribution with a min = 0 , max = 2
   y <- runif(1,0,2)
   # labelling y as a generated single value of a random uniform distribution with a min = 0 , max = 2
   if (y < fx(temp)) { # if function, is y less than function fx and temp (runif 1,0,2)
-    count = count + 1 # the return for above functiuon - if y is less than ... then count + 1 instead 
+    count <- count + 1 # the return for above functiuon - if y is less than ... then count + 1 instead 
     x[count] <- temp # temp value in x 
   } } 
   
   return(x)
-  }
+}
+
+
+
 
 # testing out simulated code 
 
-accept_reject(2)
-# could not find function fx? 
+# could not find function fx?? 
+
+# may need to find n 
