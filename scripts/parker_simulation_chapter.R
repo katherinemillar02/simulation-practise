@@ -24,8 +24,20 @@ triangle <-
 print(triangle(6))
 
 
-triangle_plot <- data.frame(x = seq(-0.5, 2.5, by = 0.01),
+triangle_frame <- 
+  data.frame(x = seq(-0.5, 2.5, by = 0.01),
+             # generates sequences from -0.5 to 2.5, step size is 0.01
                                y = triangle(seq(-0.5, 2.5, by = 0.01)),
+             # Y ( generates sequences from -0.5 to 2.5, step size is 0.01)
+             # this is from the triangle data!! 
                                x_sample = runif(301, 0, 2),
+# X (generates uniform distribution, 301 values, min = 0, max = 2 )
                                y_sample = runif(301, 0, 1))
+# Y (generates uniform distribution, 301 values, min 0, max = 2)
+
+
+# loading ggplot package to visualise this simulation 
+library(ggplot2)
+
+
 
