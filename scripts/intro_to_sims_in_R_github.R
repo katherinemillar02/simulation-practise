@@ -255,4 +255,30 @@ hist(apply(x_100_repeat, 2, sd), main = "sd", col = "green", xlim = c(0.6,1.4)) 
 # adding line
 abline(v = 1, col = "red", lty = 2, lwd = 2)
 
+# FUNCTIONS ----
+
+# writing a function 
+# nrep, replicates 
+
+# writing own simulation
+# normal distribution with 
+# 10 distributions, mean = 1, sd = 2
+# repeated 21 times 
+own_function <- replicate(21, rnorm(n = 10, mean = 1, sd =2))
+
+# making a histogram of this simulation 
+# splitting the plots viewer up to see both plots
+par(mfrow = c(1,2), mar = c(5,5,1,1))
+
+# first plot (with mean line)
+hist(apply(own_function, 2, mean), main = "own mean", col = "yellow", xlim = c(-1.5,3))
+
+# adding mean line to this 
+abline( v = 1, col = "red", lty = 2, lwd = 2)
+
+# second plot (with sd line)
+hist(apply(own_function, 2, mean), main = "own sd", col = "yellow", xlim = c(-1.5,3))
+
+# adding sd line
+abline(v=2, col = "red", lty = 2, lwd = 2)
 
