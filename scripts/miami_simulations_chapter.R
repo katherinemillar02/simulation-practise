@@ -180,5 +180,9 @@ flip_one(sample(side, size = 1))
 # will get different result for flipping coin 
 # result shows what money you lose 
 
+# simulating code again without sides variable 
+flip_one(sample(c("heads", "tails"), size = 1))
+# genertates the same bet results 
+
 # REPLICATES AND OUTCOMES ----
 
