@@ -232,3 +232,25 @@ hist(apply(x6, 2, sd), main = "SD",col = "black", xlim = c(0.6,1.4))
 abline(v = 1, col = "red", lty = 2, lwd = 2)
 # adding line at x = 1 
 
+
+# simulating means and sds 
+# from 1000 repeats of simulations 
+# with n = 10, and the default; mean = 0, sd = 1
+
+# setting the seed for repeatability 
+set.seed(10)
+
+x_100_repeat <- replicate(1000, rnorm(10))
+
+# generating histograms with lines 
+par(mfrow = c(1,2), mar = c(5,5,1,1))
+
+# 1st plot 
+hist(apply(x_100_repeat, 2, mean), main = "mean", col = "green", xlim = c(-1,1))
+# adding line 
+abline(v = 0, col = "red", lty = 2, lwd = 2)
+
+# 2nd plot 
+hist(apply(x_100_repeat, 2, sd), main = "sd", col = "green", xlim = c(0.6,1.4))
+# adding line
+abline(v = 1, col = "red", lty = 2, lwd = 2)
