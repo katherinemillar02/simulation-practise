@@ -218,9 +218,17 @@ x6_plot <-
 
 
 # adding mean and sd lines
-par(mfrow = c(1,2), mar = c(5,5,1,1))
+par(mfrow = c(1,2), mar = c(5,5,1,1)) # 2 plots? 
+
+# 1st plot 
 hist(apply(x6, 2, mean), main = "mean",col = "black", xlim = c(-1,1))
+# apply() function , adding mean
+# adding line at x = 0 
 abline(v = 0, col = "red", lty = 2, lwd = 2)
+
+# 2nd plot 
 hist(apply(x6, 2, sd), main = "SD",col = "black", xlim = c(0.6,1.4))
+# apply() function, 2, adding sd 
 abline(v = 1, col = "red", lty = 2, lwd = 2)
+# adding line at x = 1 
 
