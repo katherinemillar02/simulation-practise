@@ -1,6 +1,5 @@
-# beginning with rnorm function 
 
-
+# STANDARD PROBABILITY DISTRIBUTIONS ----
 
 rnorm(5) # 5 numbers with a mean of 0, sd of 1
 
@@ -12,7 +11,7 @@ pnorm(5, 4, 2) # less than 5, mean 4, sd 2
 qnorm(0.975) # p = 0.975, mean = 0, sd = 1 (as is default)
 # inverse of pnorm
 
-# SAMPLING FROM COMPLEX DISTRIBUTIONS
+# SAMPLING FROM COMPLEX DISTRIBUTIONS ----
 # Accept reject algorithim 
 
 # generating 
@@ -79,11 +78,9 @@ while(count < n) {  # count of 0 < n - while = loop syntax
   return(x)
 }
 
-
-
-
 # testing out simulated code 
-
 # could not find function fx?? 
-
 # may need to find n 
+
+
+# SIMULATIONS FROM STUDIES/ EXPERIMENTS (simulations from models) ----
