@@ -4,7 +4,7 @@ This is my GitHub repository for learning and going through certain simulation c
 
 ## Scripts 📝
 
-Links to the relevant workbooks/ resources and my attempted scripts at completing througb the tasks. 
+Links to the relevant workbooks/ resources and my attempted scripts at completing through the tasks. 
 
 __1.__  **__peng_simulation_chapter.R__**      
 link to workbook: https://bookdown.org/rdpeng/rprogdatascience/simulation.html      
