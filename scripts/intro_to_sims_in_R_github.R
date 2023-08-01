@@ -391,6 +391,27 @@ simulation <- function(n) {
 simulation(50) # this will show no significance 
 # 50 used as vector number 
 
+# doing again but for where simulation(10)
+
+# setting code for two plots 
+par(mfrow = c(1,2))
+
+# setting the replicates 
+nrep <- 20
+# replicate code for simulation 
+# histogram 
+sim2 <- replicate(nrep, simulation(10))
+hist(sim2, breaks = 21, col = c("green", rep("red", 20)),
+main = "nrep = 20, n = 10", xlab = "pvalue")
+
+# setting the replicates 
+nrep <- 100
+# replicate code for simulations
+sim2 <- replicate(nrep, simulation(10))
+# histogram 
+hist(sim2, breaks = 21, col = c("green", rep("red", 20)),
+     main = "nrep = 100, n = 10", xlab = "pvalue")
+
 
 # SIMULATING FOR A PRE-REGISTRATION -------
 
