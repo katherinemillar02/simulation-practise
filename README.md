@@ -40,7 +40,7 @@ Simulation Chapter (Chapter 13) covers:
 
 __4.__ script name: **__intro_to_sims_in_R_github.R__**     
 link to workbook: https://github.com/MalikaIhle/Introduction-Simulations-in-R    
-Released: 14/12/2022 Malika Ihle                
+Released: 14/12/2022 (Last Updated) Malika Ihle                
 Workbook: "Introduction to Simulations in R" (GitHub Workbook)
 This covers: 
 - Random number generators/ sampling theory
