@@ -215,5 +215,33 @@ for (season in c("autumn", "winter", "spring", "summer")) {
 }
 
 
+# learning to repeat an action - use pair of numbers 
+# start: end 
+
+# using numbers 1 - 5
+1:5
+# gives 5 numbers: 1, 2, 3, 4, 5
+
+# numbers 30 - 20 
+30:20
+# goes down in order
+
+# labelling numbers to letters 
+a <- 18
+b <- 7
+
+# using letters to use pair of numbers (but with coded numbers)
+a:b
+
+# switching 
+b:a
+
+# using for loop with a simulation 
+for (i in 1:5) {
+  print(i)
+}
+
+# prints in down list 
+
 # REPLICATES AND OUTCOMES ----
 
