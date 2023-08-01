@@ -354,8 +354,42 @@ hist_normal_2()
 # n 2 
 hist_own_2()
 
-# SIMULATING AN EFFECT - CHECKING POWER (t-tests) -----
 
+
+# SIMULATING AN EFFECT - CHECKING POWER (t-tests) -----
+# simulating no effect, alpha 
+
+# drawing from the same normal distribution twice 
+
+# first
+one <- rnorm(3)
+
+#second 
+two <- rnorm(3)
+
+# do two results differ significantly?
+
+# student's t-test to see
+t.test(one, two) # p-value shows no significant difference 
+
+# extracting p-value
+str(t.test(one, two)) # displays structure of the object 
+# can use it to see exact code of p.value and vaue 
+
+# extracting p-value
+t.test(one, two)$p.value # will just display p.value 
+# 0.9107287
+
+# writing this whole thing as a function 
+simulation <- function(n) {
+  one <- rnorm(3)
+  two <- rnorm(3)
+  t.test(one, two)$p.value
+}
+
+# testing simulation 
+simulation(50) # this will show no significance 
+# 50 used as vector number 
 
 
 # SIMULATING FOR A PRE-REGISTRATION -------
