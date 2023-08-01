@@ -437,6 +437,34 @@ hist(sim4, breaks = 21, col = c("green", rep("red", 20)),
 # not much difference between n = 100 and n = 1
 # however shows a range 0f 0-0.8 for both and that they are never significant 
 
+# simulating FOR effect / CHECK POWER 
+
+# calculate the power of a t-test for a given sample 
+power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.6)
+# gives n? 
+
+normdis1 <- rnorm(n = 10, mean = 1, sd = 0)
+normdis2 <-rnorm(n = 100, mean = 2, sd = 1)
+
+# t. test and extracting p value 
+
+t.test(normdis1, normdis2)
+
+str(t.test(normdis1, normdis2))
+
+t.test(normdis1, normdis2)$p.value
+# 4.415004e-18
+# strong significant difference 
+
+simulation2 <- function(n) {
+  normdis1 <- rnorm(n = 10, mean = 1, sd = 0)
+  normdis2 <-rnorm(n = 100, mean = 2, sd = 1)
+  t.test(normdis1, normdis2)$p.value
+}
+
+
+
+power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.6)
 
 # SIMULATING FOR A PRE-REGISTRATION -------
 
