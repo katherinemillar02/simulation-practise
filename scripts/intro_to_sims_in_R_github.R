@@ -320,9 +320,39 @@ hist_normal_2 <- function(nrep) {
 
 
 # testing the histogram 
+hist_normal_2()
 hist_normal_2(100000)
 
 # code runs number doesn't make a difference 
+
+
+# doing this again but changing n 
+# will compare differences of changing n 
+# replicate(mean(rnorm))
+
+# setting the nrep
+nrep2 <- 10
+
+# coding the replicate 
+own_replicate <- replicate(nrep2, mean(rnorm(2)))
+# setting the n to 2, keeping mean = 0 and sd = 1 default 
+
+hist_own_2 <- function(nrep2) {
+  hist(own_replicate)
+}
+
+# simulating histogram 
+hist_own_2()
+
+# many differences 
+
+# comparing histograms 
+par(mfrow = c(1,2), mar = c(5,5,1,1)) # code to see histograms together 
+# patchwork would also work..? 
+# n 1 
+hist_normal_2()
+# n 2 
+hist_own_2()
 
 # SIMULATING AN EFFECT - CHECKING POWER (t-tests) -----
 
