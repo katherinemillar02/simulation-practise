@@ -523,6 +523,10 @@ sample(c("Male", "Female"), size = n, replace = TRUE)
 # table simulation 
 head(table)
 
+# running a logistic expression with the simulated data frame 
+# picking an outcome variable: insect 
+
+
 
 
 
