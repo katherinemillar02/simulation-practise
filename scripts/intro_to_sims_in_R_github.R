@@ -280,15 +280,49 @@ hist(apply(own_function, 2, mean), main = "own mean", col = "yellow", xlim = c(-
 abline( v = 1, col = "red", lty = 2, lwd = 2)
 
 # second plot (with sd line)
-hist(apply(own_function, 2, mean), main = "own sd", col = "yellow", xlim = c(-1.5,3))
+hist(apply(own_function, 2, sd), main = "own sd", col = "yellow", xlim = c(1,3))
 
 # adding sd line
 abline(v=2, col = "red", lty = 2, lwd = 2)
 
 # modifying the histogram 
 # changing code with mean 
+# listing the actual values as are not default 
 own_function_2 <- replicate(21, mean(rnorm(n = 10, mean = 1, sd =2)))
 
+# histogram with mean and sd for this new code 
+
+# split screen
+par(mfrow = c(1,2), mar = c(5,5,1,1))
+
+# general histogram code including simulation code 
+hist(replicate(21, mean(rnorm(n = 10, mean = 1, sd =2))))
+# or 
+hist(own_function_2)
+
+# using a nrep instead of a number 
+# setting the nrep 
+nrep <- 5555
+
+# replicate code including the nrep
+new_code <- replicate(nrep, mean(rnorm(555, 4, 5)))
+
+# including new code in function to create a histogram 
+histogram_normal <- 
+  function(nrep) {
+    hist(replicate(nrep, mean(rnorm(555, 4, 5))))
+  }
+
+# trying set code 
+hist_normal_2 <- function(nrep) {
+    hist(new_code)
+  }  
+
+
+# testing the histogram 
+hist_normal_2(100000)
+
+# code runs number doesn't make a difference 
 
 # SIMULATING AN EFFECT - CHECKING POWER (t-tests) -----
 
