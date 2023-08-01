@@ -524,9 +524,10 @@ sample(c("Male", "Female"), size = n, replace = TRUE)
 head(table)
 
 # running a logistic expression with the simulated data frame 
-# picking an outcome variable: insect 
+# picking an outcome variable: colour
 
-
+# example  
+glm(colour ~ insect   )
 
 
 
