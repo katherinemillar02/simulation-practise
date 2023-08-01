@@ -488,7 +488,36 @@ main = "nrep = 1000", n = 64, delta = 0.5, xlab = "pvalue")
 prop.table(table(sim2_rep < 0.05)) # simulation 2 is significant 
 
 # using power t tets to comapre results 
-power.t.test(n = 64, delta = 0.5, sd = 1)
+power.t.test(n = 64, delta = 0.5, sd = 1) 
 
 # SIMULATING FOR A PRE-REGISTRATION -------
 
+
+# simulating a fake dataset 
+
+# setting the seed for repeatability or randomness 
+set.seed(4321)
+
+# setting the size of the dataset 
+n <- 20
+
+# setting objects for the table 
+drosophila_bee <- c("Drosophila", "Bee") 
+male_female <- c("Male", "Female")
+brown_yellow <- c("Brown", "Yellow")
+age <- rnorm(n = 100, mean = 30, sd = 10 )
+
+# generating a table 
+table <- data.frame(
+  sex <- sample(male_female, size = n, replace = TRUE),
+  insect <- sample(drosophila_bee, size = n, replace = TRUE), 
+  colour <- sample(brown_yellow, size = n, replace = TRUE),
+  age 
+ 
+)
+
+# individually checking the table - to check it follows 
+sample(c("Male", "Female"), size = n, replace = TRUE)
+
+# table simulation 
+head(table)
