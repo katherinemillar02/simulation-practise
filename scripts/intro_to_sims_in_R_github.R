@@ -529,9 +529,15 @@ head(table)
 # example  
 simulation_glm <- glm(age ~ insect, data = table)
 
-# summary analysus 
+# summary analysis 
 summary(simulation_glm)
 
+# code for if this code doesn't work
+table[1:3] <- lapply(table[1:3], as.factor)
 
+# nwq glm, but poisson not binomial 
+glm2 <- glm(age ~ insect, family = poisson, data = table)
 
+# analysing model
+summary(glm2)
 
