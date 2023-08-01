@@ -1,3 +1,6 @@
+# GENERATING RANDOM NUMBERS AND SAMPLING THEORY -----
+
+
 # running a sequence
 x1 <- 1:10
 
@@ -255,7 +258,7 @@ hist(apply(x_100_repeat, 2, sd), main = "sd", col = "green", xlim = c(0.6,1.4)) 
 # adding line
 abline(v = 1, col = "red", lty = 2, lwd = 2)
 
-# FUNCTIONS ----
+# GENERATING FUNCTIONS -------
 
 # writing a function 
 # nrep, replicates 
@@ -286,4 +289,10 @@ abline(v=2, col = "red", lty = 2, lwd = 2)
 # changing code with mean 
 own_function_2 <- replicate(21, mean(rnorm(n = 10, mean = 1, sd =2)))
 
+
+# SIMULATING AN EFFECT - CHECKING POWER (t-tests) -----
+
+
+
+# SIMULATING FOR A PRE-REGISTRATION -------
 
