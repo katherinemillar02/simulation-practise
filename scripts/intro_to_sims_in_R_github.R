@@ -204,7 +204,7 @@ x6 <- replicate(24, rnorm(1000))
 par(mfrow = c(1,2), mar = c(5,5,1,1))
 
 
-# x6 plot 
+# x6 replicate data - histogram 
 # apply function with histogram and adding ablines
 x6_plot <-
   apply(x6, 2,
@@ -214,6 +214,13 @@ x6_plot <-
           abline(v = mean(x), col = "red", lwd = 2)
           abline(v = 0, col = "yellow", lty = 2, lwd = 2)
         } )
+# some errors but codes
 
 
+# adding mean and sd lines
+par(mfrow = c(1,2), mar = c(5,5,1,1))
+hist(apply(x6, 2, mean), main = "mean",col = "black", xlim = c(-1,1))
+abline(v = 0, col = "red", lty = 2, lwd = 2)
+hist(apply(x6, 2, sd), main = "SD",col = "black", xlim = c(0.6,1.4))
+abline(v = 1, col = "red", lty = 2, lwd = 2)
 
