@@ -435,6 +435,8 @@ hist(sim4, breaks = 21, col = c("green", rep("red", 20)),
      main = "nrep = 1000, n = 1", xlab = "pvalue")
 
 # not much difference between n = 100 and n = 1
+# however shows a range 0f 0-0.8 for both and that they are never significant 
+
 
 # SIMULATING FOR A PRE-REGISTRATION -------
 
