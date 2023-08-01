@@ -1,5 +1,5 @@
-# practicing some random selection 
 
+# RANDOM NUMBER GENERATOR ----
 
 # generating random numbers 
 # random number generator is 1 
@@ -39,7 +39,7 @@ summary(x)
 # e.g. using 2 
 pnorm(2)
 
-# SETTING A NUMBER SEED
+# SETTING A NUMBER SEED (randomness and repeatability) ----
 
 set.seed(1)
 
@@ -59,7 +59,7 @@ rpois(10,2) #  will give 10 numbers with lambda 2
 rpois(10,20) #  will give 10 numbers with lambda 20 
 
 
-# SIMULATING A LINEAR MODEL 
+# SIMULATING A LINEAR MODEL ----
 `
 # setting the seed 
 
@@ -85,7 +85,7 @@ plot(x, y)
 
 
 
-# binomial distribution -----
+# binomial distribution 
 set.seed(10) # setting repeatability 
 
 # setting x  but using BINOM instead of normal 
