@@ -182,7 +182,27 @@ flip_one(sample(side, size = 1))
 
 # simulating code again without sides variable 
 flip_one(sample(c("heads", "tails"), size = 1))
-# genertates the same bet results 
+# generates the same bet results 
+
+# simulating a game again 
+# betting game with multiple rounds
+# combining function AND sample()
+
+betting_one <- function() {
+  x <- sample(c("heads", "tails"), size = 1)
+  if( x == "heads")
+    return(2)
+    else if ( x == "tails") {
+      return(-1)
+      
+    }
+}
+
+betting_one() # running function with sample()
+ # -1 comes out on top one 
+# Using R to see which one is more often in the simulation 
+
+
 
 # REPLICATES AND OUTCOMES ----
 
