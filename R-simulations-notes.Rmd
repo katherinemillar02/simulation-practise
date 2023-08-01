@@ -1,40 +1,43 @@
 **Peng Simulation Chapter Notes**
 
-#### Simulations can be used for:
-Random number generation
-Random sampling
-Simulate a system to model random output
+Simulations can be used for:      
+- Random number generation
+- Random sampling
+- Simulate a system to model random output
 
 **Stanford Simulation Chapter Notes:**
 
-**Miami Simulation Chapter Notes:**
-The if function:
-Take a certain action based on the outcome of an event
-Looking at conditional statements
-Logical data in binary
-if statement:
-A program unit that is a conditional statement
-Selection of action from multiple possibilities using different lines
-Conditional statements usually reside inside a function
-Express alternative behavior depending on argument values
-A conditional statement begins with an if header followed by a condition to examine in parentheses
-After the condition, there's an action to perform enclosed in curly braces
-If the condition is true, the program executes the statements inside the braces, making it an if statement
-If a conditional statement contains a return statement, and it executes, the rest of the code in the function is skipped
-General description of if statement:
-RCopy code
-if (<expression>) { <body> } else if (<expression>) { <body> } else if (<expression>) { <body> ... } else { <body> } 
-The else means "otherwise"
-We can stack up else if blocks after an initial if to define a series of alternative options
-An if-block cannot begin with an else in the series
-There must exist one if clause
-When a series of else if blocks appear after an if, this represents a series of alternatives, called an if sequence
-An if without a preceding else begins a new if sequence
-R scans all the conditions in an if sequence and takes action when it finds a condition that evaluates to TRUE. All other actions before and after the matching one are ignored
-The else block is optional and takes care of everything that does not have a match
-Comparing strings:
+**Miami Simulation Chapter Notes:**     
+The if statement:                     
+- Takes a certain action based on the outcome of an event    
+- Looking at conditional statements    
+- Logical data in binary    
+- A program unit that is a conditional statement    
+- Selection of action from multiple possibilities using different lines    
+- Conditional statements usually reside inside a function   
+- Express alternative behavior depending on argument values    
+- A conditional statement begins with an if header followed by a condition to examine in   parentheses     
+- After the condition, there's an action to perform enclosed in curly braces     
+- If the condition is true, the program executes the statements inside the braces,        making it an if statement
+- If a conditional statement contains a return statement, and it executes, the rest of    the code in the function is skipped    
+-  General description of if statement:   
 
-**Parker Simulation Chapter:**
+```r
+if (<expression>) { <body> } else if (<expression>) { <body> } else if (<expression>) { <body> ... } else { <body> } 
+```
+
+- The else means "otherwise"    
+- We can stack up else if blocks after an initial if to define a series of alternative    options    
+- An if-block cannot begin with an else in the series
+ There must exist one if clause
+ When a series of else if blocks appear after an if, this represents a series of         alternatives, called an if sequence
+- An if without a preceding else begins a new if sequence
+- R scans all the conditions in an if sequence and takes action when it finds a condition that evaluates to TRUE. All other actions before and after the matching one are ignored
+- The else block is optional and takes care of everything that does not have a match
+
+Comparing strings:   
+
+**Parker Simulation Chapter:**      
 Simulating a sample from common probability distributions
 Simulation experiments for sampling distributions
 Simulation experiments for type I error rates and power calculations
@@ -63,5 +66,7 @@ A simple example to illustrate this method considers a continuous random variabl
 
 EXplaining while() loop in function {} https://sparkbyexamples.com/r-programming/while-loop-in-r/
 
+
+**Introduction to Simulations in R**
 
 
