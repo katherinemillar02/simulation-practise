@@ -456,15 +456,39 @@ t.test(normdis1, normdis2)$p.value
 # 4.415004e-18
 # strong significant difference 
 
-simulation2 <- function(n) {
+# setting the means 
+m1 <- 1
+m2 <- 2
+
+
+simulation2 <- function(n, m1, m2) {
   normdis1 <- rnorm(n = 10, mean = 1, sd = 0)
   normdis2 <-rnorm(n = 100, mean = 2, sd = 1)
   t.test(normdis1, normdis2)$p.value
 }
 
+# this simulation contain the means as well as the n in the function() section
 
+# this function needs to be repeated 1000 times 
 
-power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.6)
+# setting the seed for repeatability and randomness
+set.seed(100)
+
+# simulation but with replicate 
+sim2_rep <- replicate(1000, simulation2(n = 64, m1, m2))
+
+# putting this into histograms 
+par(mfrow = c(-0.01,-0.1))
+
+# histogram
+hist(sim2_rep, breaks = 21, col = c("green", rep("red", 20)),
+main = "nrep = 1000", n = 64, delta = 0.5, xlab = "pvalue")
+
+# how many significant 
+prop.table(table(sim2_rep < 0.05)) # simulation 2 is significant 
+
+# using power t tets to comapre results 
+power.t.test(n = 64, delta = 0.5, sd = 1)
 
 # SIMULATING FOR A PRE-REGISTRATION -------
 
