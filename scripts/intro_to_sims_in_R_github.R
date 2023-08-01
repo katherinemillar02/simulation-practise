@@ -282,3 +282,8 @@ hist(apply(own_function, 2, mean), main = "own sd", col = "yellow", xlim = c(-1.
 # adding sd line
 abline(v=2, col = "red", lty = 2, lwd = 2)
 
+# modifying the histogram 
+# changing code with mean 
+own_function_2 <- replicate(21, mean(rnorm(n = 10, mean = 1, sd =2)))
+
+
