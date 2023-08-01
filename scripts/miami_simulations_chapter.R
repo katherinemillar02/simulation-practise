@@ -1,5 +1,4 @@
-# trying to ensure learning of simulations 
-# do any of these require additional packages? 
+# THE SAMPLE FUNCTION -----
 
 # coin as an example 
 coin <- c("heads", "tails")
@@ -18,6 +17,10 @@ sample(groups, size = 8, replace = TRUE)
 
 # without replace = TRUE 
 sample(groups, size = 8) # does not work - as only two elements to choose from 
+
+
+
+# THE IF/ IF ELSE STATEMENT ----
 
 # using 'if'
 if_test <- function(x) { 
@@ -109,8 +112,9 @@ if_test_5(-4)
 if_test_5(0)
 
 
-# COMPARING STRINGS 
-# looking a 'counties'
+# COMPARING STRINGS ----
+
+# looking a 'counties' - correct to city 
 
 county <- function(x){
   if(x=="Somerset"){
@@ -124,7 +128,7 @@ county <- function(x){
   }
 }
 
-# loading tidyverse package to try tibb;e 
+# loading tidyverse package to try tibbLe - SIMULATIONS
 library(tidyverse)
 
 # making a tibble 
@@ -140,4 +144,11 @@ students
 # annotating a tibble using purr()
 students <- 
   mutate(county = map_chr(city, county))
+
+
+# FOR loops ----
+
+
+
+# REPLICATES AND OUTCOMES ----
 
