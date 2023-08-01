@@ -499,25 +499,32 @@ power.t.test(n = 64, delta = 0.5, sd = 1)
 set.seed(4321)
 
 # setting the size of the dataset 
-n <- 20
+n <- 10
 
 # setting objects for the table 
-drosophila_bee <- c("Drosophila", "Bee") 
+drosophila_bee <- c("Drosophila", "Bee")
 male_female <- c("Male", "Female")
 brown_yellow <- c("Brown", "Yellow")
 age <- rnorm(n = 100, mean = 30, sd = 10 )
 
 # generating a table 
 table <- data.frame(
-  sex <- sample(male_female, size = n, replace = TRUE),
-  insect <- sample(drosophila_bee, size = n, replace = TRUE), 
-  colour <- sample(brown_yellow, size = n, replace = TRUE),
-  age 
+  sex = sample(male_female, size = n, replace = T),
+  insect = sample(drosophila_bee, size = n, replace = T), 
+  colour = sample(brown_yellow, size = n, replace = T),
+  age = rnorm(n, mean = 30, sd = 10 )
  
 )
+
 
 # individually checking the table - to check it follows 
 sample(c("Male", "Female"), size = n, replace = TRUE)
 
 # table simulation 
 head(table)
+
+
+
+
+
+
