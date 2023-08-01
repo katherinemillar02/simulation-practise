@@ -1,8 +1,8 @@
-# Simulation Practise 
+# Simulation Practise 🕹
 
 This is my github repistory for learning and going through certain simulation chapters. 
 
-## Scripts 
+## Scripts 📝
 
 __1.__ script name: **__peng_simulation_chapter.R__**      
 link to workbook: https://bookdown.org/rdpeng/rprogdatascience/simulation.html      
