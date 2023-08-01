@@ -1,5 +1,5 @@
-# Simulating data with R - using RNG of different kinds of variables 
 
+# RANDOM NUMBER GENERATION/ SEED SETTING ----
 
 vector_poission <- rpois(100, 5)
 # setting an object 
@@ -20,7 +20,7 @@ vector_poission <- rpois(100, 5)
 mean(vector_poission)
 # different number? 
 
-# APPLY FUNCTION 
+# APPLY FUNCTION ----
 # the sum of exponential gives a gamma distribution?? confirmed by simulation, covering helpful functions in R 
 
 # want to AVOID for() loops , this is slower than working with apply()
@@ -137,7 +137,7 @@ system.time(
 head(x5)
 
 
-# GENERATING NORMAL RANDOM VARIABLES 
+# GENERATING NORMAL RANDOM VARIABLES ----
 
 # genrating samples 
 samples1 <- rnorm(100)
@@ -208,10 +208,22 @@ ggplot(data.frame(data=c(combined, population1, population2), labels=rep(c("comb
 # -  all normal distriution, but 3 different ones with pop1,2 and combined 
 ggplot(data.frame(data=c(combined), labels=rep(c("combined"), c(3e6))), aes(x=combined)) + stat_bin(aes(fill=labels), position="identity", binwidth=0.25, alpha=0.5) + theme_bw()
 
-# GENERATING RANDOM DNA STRINGS 
+# GENERATING RANDOM DNA STRINGS ----
 
 # cannot get package 
 # too Base R - 
+
+
+# GENERATING MULTIVARIATE NORMAL CLUSTERS ----
+
+
+# MONTE CARLO SIMULATIONS ----
+
+
+
+# GAMMA DISTRIBUTION SAMPLING: GENERATING POISSON DISTRIBUTION ----
+
+# GENERATING INFORMATION OF POWER OF STATISTICAL TESTS ----
 
 
 
