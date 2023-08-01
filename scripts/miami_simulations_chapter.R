@@ -146,7 +146,31 @@ students
 
 
 # FOR loops ----
-# conditional
+# conditional execution - simulate - betting game on coin
+
+# loading package in 
+library(tidyverse) # need functions from tidyverse
+
+# function - with a string argument 
+# side of coin showing and result of bet 
+
+# the game 
+# heads: get 2 dollars
+# tails: lose 1 dollar 
+
+# writing the function/ simulation 
+flip_one <- function(x) { 
+  if ( x == "heads") {
+    return(2)
+    } else if (x == "tails") {
+      return(-1)
+    }
+  }
+
+# simulating a print of the code 
+c(flip_one("heads"), flip_one("tails"))
+# 2 -1
+# shows 2 for heads and -1 for tails 
 
 
 # REPLICATES AND OUTCOMES ----
