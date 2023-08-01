@@ -172,6 +172,13 @@ c(flip_one("heads"), flip_one("tails"))
 # 2 -1
 # shows 2 for heads and -1 for tails 
 
+side <- c("heads", "tails") # generating a simulation for a side of a coin
+# just for heads and tails 
+
+# combining flip one function simulation with 1 sample of side of a coin
+flip_one(sample(side, size = 1)) 
+# will get different result for flipping coin 
+# result shows what money you lose 
 
 # REPLICATES AND OUTCOMES ----
 
