@@ -413,5 +413,28 @@ hist(sim2, breaks = 21, col = c("green", rep("red", 20)),
      main = "nrep = 100, n = 10", xlab = "pvalue")
 
 
+# mixing amount of replicates and n values
+# replicate = 1000
+
+# setting the viewer to show two plots 
+par(mfrow = c(1,2))
+
+# histo 1 
+nrep <- 1000
+# replicate code for simulations 
+sim3 <- replicate(nrep, simulation(100))
+# histogram code 
+hist(sim3, breaks = 21, col = c("green", rep("red", 20)),
+main = "nrep = 1000, n = 100", xlab = "pvalue")
+
+# histo 2 
+# replicate code for simulations 
+sim4 <- replicate(nrep, simulation(1))
+# histogram code 
+hist(sim4, breaks = 21, col = c("green", rep("red", 20)),
+     main = "nrep = 1000, n = 1", xlab = "pvalue")
+
+# not much difference between n = 100 and n = 1
+
 # SIMULATING FOR A PRE-REGISTRATION -------
 
