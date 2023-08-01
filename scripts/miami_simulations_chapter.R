@@ -134,20 +134,19 @@ library(tidyverse)
 # making a tibble 
 students <- tibble(
   name <- c("Katie", "Georgia", "Aaron"),
-  county <- c("Somerset", 'Norfolk', "London")
+  county <- c("Somerset", 'Norfolk', "London"), 
+  city <- c("Wells", "Norwich", "City of London")
   
 )
 
 # running the tibble 
 students
 
-# annotating a tibble using purr()
-students <- 
-  mutate(county = map_chr(city, county))
+
 
 
 # FOR loops ----
-
+# conditional
 
 
 # REPLICATES AND OUTCOMES ----
