@@ -527,8 +527,10 @@ head(table)
 # picking an outcome variable: colour
 
 # example  
-glm(colour ~ insect   )
+simulation_glm <- glm(age ~ insect, data = table)
 
+# summary analysus 
+summary(simulation_glm)
 
 
 
