@@ -202,6 +202,17 @@ betting_one() # running function with sample()
  # -1 comes out on top one 
 # Using R to see which one is more often in the simulation 
 
+# trying for loop
+for(hand in c("rock", "scissors", "paper")) {
+  print(hand)
+}
+
+# give hands - give actions - print will just reprint this 
+
+# trying this with seasons 
+for (season in c("autumn", "winter", "spring", "summer")) {
+  print(season)
+}
 
 
 # REPLICATES AND OUTCOMES ----
