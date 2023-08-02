@@ -326,8 +326,39 @@ ggplot(results3_table, aes(results_3)) + # using made tibble
 
 # SIMULATIONS WITH TIDYVERSE 
 
+# using sides of a coin
+sides <- c("heads", "tails")
 
+# make a sample simulation - 8 tosses
+tosses <- sample(sides, size = 8, replace = TRUE)
+# this code tosses a coin 8 times, shows the results
 
+# trying code
+tosses
+
+# using sum with toss code to see how many times 'heads' will be shown
+sum(tosses== "heads")
+
+# the sum of tails
+sum(tosses == "tails")
+
+# half and half 
+
+# trying 100 tosses instead of 8
+tosses_2 <- sample(sides, size = 100, replace = TRUE)
+
+# trying code 
+tosses_2
+
+# seeing sums of heads and tails again
+
+# heads
+sum(tosses_2 == "heads") # 49
+
+# tails 
+tails_sum <- sum(tosses_2 == "tails") # 51 
+
+#  code always seens to be the same 
 # REPLICATE will elimiate the need to do for loops
 
 
