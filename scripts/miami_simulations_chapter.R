@@ -304,6 +304,25 @@ results_3 <- replicate(rounds_3, betting_one())
 # confirming the length - amount of rounds peformed 
 length(results_3)
 
+# measuring the total of money earned after 100 rounds of this game 
+sum(results_3)
+
+# visualising the results of this simulation 
+
+# loading ggplot package in 
+library(tidyverse)
+
+# making a tibble/ table of these results 
+results3_table <- tibble(results_3)
+
+# visualising plot 
+ggplot(results3_table, aes(results_3)) + # using made tibble 
+  geom_bar() +
+  coord_flip()
+# both are the same? 
+
+
+
 # REPLICATE will elimiate the need to do for loops
 
 
