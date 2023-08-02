@@ -353,23 +353,38 @@ tosses_2
 # seeing sums of heads and tails again
 
 # heads
-sum(tosses_2 == "heads") # 49
+head_sum <- sum(tosses_2 == "heads")  
 
 # tails 
-tails_sum <- sum(tosses_2 == "tails") # 51 
+tails_sum <- sum(tosses_2 == "tails") 
 
 #  code always seens to be the same 
 # REPLICATE will elimiate the need to do for loops
 
 
-# expeirment - seeing how many heads with one simulationm
+# experirment - seeing how many heads with one simulationm
+set.seed(431)
+
+results_5 <- sample(sides, size = 100, replace = TRUE)
+# works 
+
+heads_sum <- sum(results_5 == "heads", replace = TRUE)
+
 one_experiment <- function() {
   results_5  <- sample(sides, size = 100, replace = TRUE)
-  tails_sum <- sum(tosses_2 == "tails")
-  return(tails_sum)
+  heads_sum <- sum(results_5 == "heads", replace = TRUE)
+  return(head_sum)
 }
 
+one_trial <- function() {
+  outcomes <- sample(sides, size = 100, replace = TRUE)
+  num_heads <- sum(outcomes == "heads")
+  return(num_heads)
+} 
+
 one_experiment()
+
+
 # still shows 51 but this time from one code 
 
 # using nrep with replicate to run code 1000 times 
