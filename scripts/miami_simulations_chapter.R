@@ -377,14 +377,18 @@ one_experiment()
 rep_n <- 10000
 
 # repeating the above simulation 10 k times
-second_experiment <- replicate(n = rep_n, one_experiment)
-# code still broken? 
+second_experiment <- replicate(n = rep_n, one_experiment())
+# FIXED - REMEMEBR ()
+
 
 # testing to see if it is run 10,000 times 
 length(second_experiment)
 
 # running the new 10,000 repeated simulation ? 
 second_experiment[1]
+second_experiment[95]
+second_experiment[50]
+# results seem to always be the same?
 
 # vewing this data in a tibble
 results_table <- 
@@ -395,6 +399,14 @@ results_table <-
   
 # running code 
 results_table
+
+# visualising the different results with a plot 
+ggplot(results_table)+
+  geom_histogram(aes(x = second_experiment, y = after_stat(density)),
+                 colour = "red", fill = "green",
+                 breaks = seq(30.5, 69.6, 1))
+# only coming up with 51? 
+# error with code 
 
 # REPLICATES AND OUTCOMES ----
 
