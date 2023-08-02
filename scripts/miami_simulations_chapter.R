@@ -243,5 +243,37 @@ for (i in 1:5) {
 
 # prints in down list 
 
+
+# combining for() and betting round
+
+for (i in 1:10) { # asking for 10 values 
+  print(betting_one()) # uses betting one function for where to get values from 
+  
+}
+
+
+# if coin is flipped 10 times these will be the results (gains and losses) of the bet 
+
+#betting_one() self contained and doesn't contain anything in the function 
+# but is a function that calls SAMPLE - randomness 
+# running each time will show 10 different results each time 
+
+# recording outcomes --
+
+# results will go once the function/ simulation is run again - results can be stored 
+# create a vector 
+
+# state the rounds of the game 
+rounds <- 10
+
+results <-vector("integer", rounds) # making results VECTOR - stating it as an integer and stating n as what was labelled for rounds 
+
+for (i in 1:rounds) {  # results should be 1 - 10 (rounds)
+  results[i] <- betting_one()  # use the function simulation of betting_one data
+}
+
+# running data 
+results
+
 # REPLICATES AND OUTCOMES ----
 
