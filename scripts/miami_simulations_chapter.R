@@ -281,6 +281,31 @@ results
 
 # TIDYVERSE can make simulations - avoiding writing many for loops 
 
+# using replicate to repeat a simulation 
+
+# labelling rounds again 
+rounds_2 <- 10
+
+# new results code
+results_2 <- replicate(10, betting_one())
+# using replicate (10) and betting one function to repeat function 10 times
+# gives 10 results of the betting one function 
+
+sum(results_2) # this with the new results_2 code 
+# this shows we have lost money? if we do the bet 10 times 
+# but code for replicate contains a for loop
+
+# doing a different number of rounds 
+rounds_3 <- 1000 
+
+# doing new results code with rounds_3 in the code 
+results_3 <- replicate(rounds_3, betting_one())
+
+# confirming the length - amount of rounds peformed 
+length(results_3)
+
+# REPLICATE will elimiate the need to do for loops
+
 
 # REPLICATES AND OUTCOMES ----
 
