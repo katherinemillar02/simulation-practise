@@ -392,8 +392,10 @@ one_experiment()
 rep_n <- 10000
 
 # repeating the above simulation 10 k times
-second_experiment <- replicate(n = rep_n, one_experiment())
+second_experiment <- replicate(1000, one_experiment())
 # FIXED - REMEMEBR ()
+
+second_experiment # still the same 
 
 head(second_experiment)
 
