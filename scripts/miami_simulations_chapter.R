@@ -275,5 +275,12 @@ for (i in 1:rounds) {  # results should be 1 - 10 (rounds)
 # running data 
 results
 
+# This is a LOOP with actions of 
+# - running a function
+# - stoting results into i 
+
+# TIDYVERSE can make simulations - avoiding writing many for loops 
+
+
 # REPLICATES AND OUTCOMES ----
 
