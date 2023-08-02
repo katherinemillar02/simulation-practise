@@ -321,6 +321,11 @@ ggplot(results3_table, aes(results_3)) + # using made tibble
   coord_flip()
 # both are the same? 
 
+# SIMULATION RECIPE 
+# programming - physical process
+
+# SIMULATIONS WITH TIDYVERSE 
+
 
 
 # REPLICATE will elimiate the need to do for loops

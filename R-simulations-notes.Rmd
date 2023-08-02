@@ -37,6 +37,33 @@ if (<expression>) { <body> } else if (<expression>) { <body> } else if (<express
 
 Comparing strings:   
 
+Beginning with simulations... 
+
+
+Determine what to simulate
+Identify the specific part of the physical process to simulate using computation.
+Decide on the numerical representation of the chosen part.
+Figure out how to simulate one value
+Develop a computer program to generate values for the numerical representation.
+Account for possible updates during the simulation, often involving randomness.
+Run the simulation and visualize
+Execute the simulation and obtain results.
+Utilize visualization to gain insights from the obtained data.
+Decide on the number of simulations needed for accurate results (e.g., thousands or millions).
+
+Putting the steps together in R
+Create a variable for the number of desired repetitions (rounds).
+Develop an "experiment" function to simulate one value based on the chosen representation.
+Use the replicate function to run the experiment multiple times and store outcomes in a vector.
+Visualize the distribution of simulated values, potentially using ggplot.
+Examples
+Not specified in the given text, but additional examples may be provided here.
+By organizing the information into bullet points, it becomes easier to read and follow the steps of the simulation process.
+
+
+
+
+
 **Parker Simulation Chapter:**      
 Simulating a sample from common probability distributions
 Simulation experiments for sampling distributions
