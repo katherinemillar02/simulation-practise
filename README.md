@@ -57,6 +57,6 @@ Simulation Chapter (Chapter 4) Building Simulations covers:
 - sample() function
 - the if/ else if() statement
 - comparing strings
-- for loops
+- for loops - avoiding writing too much code 
 - Replicates/ outcomes
 
