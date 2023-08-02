@@ -380,6 +380,7 @@ rep_n <- 10000
 second_experiment <- replicate(n = rep_n, one_experiment())
 # FIXED - REMEMEBR ()
 
+head(second_experiment)
 
 # testing to see if it is run 10,000 times 
 length(second_experiment)
