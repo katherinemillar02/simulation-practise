@@ -378,12 +378,23 @@ rep_n <- 10000
 
 # repeating the above simulation 10 k times
 second_experiment <- replicate(n = rep_n, one_experiment)
+# code still broken? 
 
 # testing to see if it is run 10,000 times 
 length(second_experiment)
 
 # running the new 10,000 repeated simulation ? 
+second_experiment[1]
 
+# vewing this data in a tibble
+results_table <- 
+  tibble(
+    replicates = 1:rep_n, 
+    views = second_experiment
+  )
+  
+# running code 
+results_table
 
 # REPLICATES AND OUTCOMES ----
 
