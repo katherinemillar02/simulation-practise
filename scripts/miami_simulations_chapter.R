@@ -362,5 +362,28 @@ tails_sum <- sum(tosses_2 == "tails") # 51
 # REPLICATE will elimiate the need to do for loops
 
 
+# expeirment - seeing how many heads with one simulationm
+one_experiment <- function() {
+  results_5  <- sample(sides, size = 100, replace = TRUE)
+  tails_sum <- sum(tosses_2 == "tails")
+  return(tails_sum)
+}
+
+one_experiment()
+# still shows 51 but this time from one code 
+
+# using nrep with replicate to run code 1000 times 
+
+rep_n <- 10000
+
+# repeating the above simulation 10 k times
+second_experiment <- replicate(n = rep_n, one_experiment)
+
+# testing to see if it is run 10,000 times 
+length(second_experiment)
+
+# running the new 10,000 repeated simulation ? 
+
+
 # REPLICATES AND OUTCOMES ----
 
