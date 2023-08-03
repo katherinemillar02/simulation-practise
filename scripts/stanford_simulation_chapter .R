@@ -327,10 +327,17 @@ mean(outcomes)
 
 # generating the means of a poisson distribution
 # sampling FROM a gamma distribution 
-lambdas <- rgamma(100, shape = 2, rate = 1, scale = 3/1)x
+lambdas <- rgamma(100, shape = 2, scale = 3)
+# scale parameter 
+# rate parameter default of 1 
 
+# setting a value for a replicate of samples 
+samples <- rep(0, 100)
+# 0 what you want to replicate and the amount of replicates 100? 
 
-
+for (i in 1:100) 
+  
+  samples[i] <- rpois(1, lambdas[i])
 
 
 # GENERATING INFORMATION OF POWER OF STATISTICAL TESTS ----
