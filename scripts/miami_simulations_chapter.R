@@ -457,7 +457,33 @@ heads[6]
 # different values 
 heads
 # THIS CODE CHANGES !!!!!!!
+library(tidyverse)
+# putting these results into a table 
+results_table <- tibble(
+  repetition = 1:num_repetitions, 
+  num_heads = heads
+)
 
+# running table 
+results_table
+
+# visualising data 
+ggplot(results_table) +
+  geom_histogram(aes(x = num_heads, y = after_stat(density)),
+                 colour = "green", fill = "red",
+                 breaks = seq(30.5, 69.6, 1))+
+  theme_classic()
+# this plot shows if the coin is thrown 1000 times 
+# how many times heads will be thrown... over 100 
+
+# explaining histogram 
+# bins have a width of = 1
+# e.g. bar on 50 - the amount of times the simulation generated 50 as the result
+
+# there is SYMMETRIC DISTRIBUTION
+# symmetric distribution is particulary good here; 
+# 100 tosses = 50 heads 
+# shows number of heads will be between 25-65
 
 # REPLICATES AND OUTCOMES ----
 
