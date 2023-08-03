@@ -624,13 +624,15 @@ accumulate(1:6, \(acc, nxt) acc + 10, .init = 10)
 
 # using grain data for accumulation 
 
+
 accumulation_grains <- function(grains_now) {
-  grains_new <- grains_now + clerks_calculation(grains_new)
+  grains_new <- grains_now + clerks_calculation(grains_now)
   return(max(1, grains_new))
 }
 
 accumulation_grains()
 
+# code brokem 
 
 # REPLICATES AND OUTCOMES ----
 
