@@ -725,8 +725,30 @@ birthday_trial()
 # AS CODE LOOKS FOR DUPLICATES
 
 # repeating the simulation across 100 classrooms
-# repeating this 10,000 times 
+# repeating this 10,000 times
 
+# setting repeating value
+num_repetitions <- 10000
+
+# code for repeating trial 10,000 times 
+bday_replicates <- replicate(n = num_repetitions, birthday_trial())
+
+# putting results into a tibble 
+
+bday_trial_table <- tibble(
+  repetitions = 1:num_repetitions, # don't forget 1:!!
+  numbertrial = bday_replicates # remember to use new replicate code assigned 
+)
+
+# running table
+bday_trial_table
+
+# visualising the distribution with a histogram 
+ggplot(bday_trial_table) +
+  geom_histogram(aes(x = bday_replicates, y = after_stat(density)),
+                 colour = "red", fill = "green",
+                 breaks = seq(0.35, 0.65, 0.1)) + 
+  geom_point(aes(x = 0.51, y = 0), colour = "pink", size = 3) 
 
 
 
