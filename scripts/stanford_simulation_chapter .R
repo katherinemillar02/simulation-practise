@@ -257,6 +257,17 @@ ex2
 
 
 # MONTE CARLO SIMULATIONS ----
+   # computing the probability of events using simulation 
+
+# roll 2 fair dice - prob that sum of 2 dice = 7
+# simulate multiple throws of 2 fair dice, fraction of THESE - that the sum is 7 
+
+# function should 
+# - simulate the trials - return TRUE if sum is 7, FALSE if not 
+
+dice_trial <- function(dicenumber, sidenumber, target, trialnumber) {
+  apply(matrix(sample(1:sidenumber, dicenumber*trialnumber, replace = TRUE), nrow = dicenumber, 2, sum)) >= target
+}
 
 
 
