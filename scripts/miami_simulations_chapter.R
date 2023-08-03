@@ -499,6 +499,21 @@ sample(c(-1,0,1), 1, prob = c(1/4, 2/4, 1/4))
 # Gives 0 as the result but this can change 
 # most likely to be 0 as the prob = 2/4 
 
+# simulating a function for this 
+# argument - number of grains 
+# return - number of grains from counter's calculation 
+# total amount received 
+
+# writing the function
+clerks_calculation <- function(grains) {
+  grains + sample(c(-1,0,1), 1, prob = c(1/4, 2/4, 1/4)) 
+}
+
+# running the function - giving amount of grains 
+clerks_calculation(10)
+# running code multiple times shows counted 9-11 
+# sometimes undercounted and sometimes overcounted
+# lines up with the function/ probability 
 
 
 
