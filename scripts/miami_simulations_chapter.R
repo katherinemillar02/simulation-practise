@@ -693,7 +693,42 @@ chosen_bday
 sum(duplicated(chosen_bday))
 # result says 0 
 
-# puttin
+# putting the simulation codes together 
+# writing a function for all of this
+
+class_duplicates <- function() {
+  chosen_bday <- sample(1:365, size = 23, replace = TRUE)
+  num_duplicates <- sum(duplicated(chosen_bday))
+  if (num_duplicates > 0) {
+    return(1)
+   } else { # must just be else 
+      return(0)
+    }
+  }
+
+# running code
+class_duplicates()
+# if this is tested once there will be 0 duplicates of choice of birthday 
+
+# looking at other classes 
+birthday_trial <- function() {
+  class <- 100
+  num_duplicates <- replicate(n = class, class_duplicates())
+  return(sum(num_duplicates / class))
+}
+
+# running code 
+birthday_trial()
+# code says 0.49 - close to theoretical value of 0.51 
+# what this value actual says? 
+# is a probability value - out of 100 classrooms 49 contain two students that share the same birthday
+# AS CODE LOOKS FOR DUPLICATES
+
+# repeating the simulation across 100 classrooms
+# repeating this 10,000 times 
+
+
+
 
 # REPLICATES AND OUTCOMES ----
 
