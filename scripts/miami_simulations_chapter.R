@@ -645,7 +645,28 @@ total_grains <- # naming function
     last(accumulate(1:10, \ (acc, nxt) accumulation_grains(acc), .init = 1)) 
   }
 
+# running function 
 total_grains()
+
+# replicating function to show repetition 
+num_repetitions <- 1000
+
+# code for total grains over 10 days, repeated 1000 times
+replicated_grains <- replicate(n = num_repetitions, total_grains(10))
+
+# putting results into a tibble 
+repgrains_table <- tibble(
+  repetition = 1:num_repetitions,
+  numbergrains = replicated_grains
+)
+
+# visualising the results with a histogram to look for symmetry 
+ggplot(repgrains_table) +
+  geom_histogram(aes(x = replicated_grains, y = after_stat(density)),
+bins = 18, colour = "black", fill = "green" ) +
+  geom_point(aes(x = 1023, y = 0), colour = "pink", size = 3)
+  
+
 
 # REPLICATES AND OUTCOMES ----
 
