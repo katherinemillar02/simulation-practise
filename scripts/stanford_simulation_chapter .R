@@ -358,6 +358,17 @@ power <- function(n, sigma, trialnumber) {
 set.seed(0)
 
 power(3, 0.5, 1000)
-# result is 0.685 
+# power result is 0.685 
+# 3 samples are not enough
 # code cannot run alone as a function 
+
+# trying a different number of samples 
+power(4,0.5,1000)
+# 4 samples also not strong enough 
+
+# trying a different number of samples again 
+power(5, 0.5, 1000)
+# 5 samples seems to work 
+
+
                   
