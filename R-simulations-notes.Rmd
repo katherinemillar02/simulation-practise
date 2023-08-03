@@ -94,6 +94,16 @@ A simple example to illustrate this method considers a continuous random variabl
 EXplaining while() loop in function {} https://sparkbyexamples.com/r-programming/while-loop-in-r/
 
 
+  are sample means of two independent samples.
+n
+n is the sample size for both samples.
+The formula calculates the difference between the two sample means.
+It divides the difference by the standard error of the difference.
+The standard error is calculated using assumed equal sample variances (0.5^2) for both samples.
+The formula is used in hypothesis testing and confidence interval calculations.
+
+
+
 **Introduction to Simulations in R**
 
 
