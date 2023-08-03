@@ -579,7 +579,25 @@ ggplot(results_table) +
 # call the own average 1023 - where the point is 
 # results are affected by the doubling effect 
 
-# Accumulation
+# Accumulation - instead of doubling effect
+# updating values as going along - errors are not independant
+
+# simulation that updates values as going along 
+# for loop is a possibility for this but requires lots of line of code 
+# PURRR - accumulate - applies a 2 argument function to elements of a vector 
+# EACH application of the function - result - of the prev application as the first argument 
+
+# using an example with fruits 
+# Labelling fruits 
+
+fruits <- c("apple", "orange", "strawberries", "grapes")
+
+# accumulation with strings 
+# function that receives 2 arguments 
+# acc = accumulator 
+# nxt = next element in the input vector 
+# str_c = two arguments, colon as a seperator - joins all results 
+
 
 
 
