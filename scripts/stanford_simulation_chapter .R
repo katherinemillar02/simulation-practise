@@ -342,7 +342,18 @@ for (i in 1:100) # i: iteration, loop value of 1 - 100
 # this selects just one value? 
 
 # GENERATING INFORMATION OF POWER OF STATISTICAL TESTS ----
+#  want to do a power. test? 
+# how many SAMPLES needed to distinguish between the mean of two rnorms()
+# 1, 0.5 and 2, 0.5 (power = 0.8) (sig level = 0.05)
+# take n SAMPLES from EACH POPULATION 
 
+# trying to write power function 
+power <- function(n, sigma, trialnumber) {
+  a <- matrix(rnorm(n*trialnumber, 1, sigma), ncol = trialnumber)
+  b <- matrix(rnorm(n*trialnumber, 2, sigma), ncol = trialnumber)
+  statistics <- (apply(a, 2, mean) - apply(b,2,mean)) / sqrt(2*sigma^2/n)
+  return(mean(abs(statistics) >= qnorm(0.975)))
+}
 
 
                   
