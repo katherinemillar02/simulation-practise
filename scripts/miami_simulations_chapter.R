@@ -747,8 +747,12 @@ bday_trial_table
 ggplot(bday_trial_table) +
   geom_histogram(aes(x = bday_replicates, y = after_stat(density)),
                  colour = "red", fill = "green",
-                 breaks = seq(0.35, 0.65, 0.1)) + 
-  geom_point(aes(x = 0.51, y = 0), colour = "pink", size = 3) 
+                 breaks = seq(0.35, 0.65, 0.01)) + # don't mess up these numbers 
+  geom_point(aes(x = 0.51, y = 0), colour = "pink", size = 3)+
+  theme_classic()
+
+# centre of symmetry is 0.51 - correct and lines up with birthday paradox!!B
+
 
 
 
