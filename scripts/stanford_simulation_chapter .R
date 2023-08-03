@@ -339,6 +339,7 @@ for (i in 1:100) # i: iteration, loop value of 1 - 100
   
   samples[i] <- rpois(1, lambdas[i]) # using lambda as the vector 
 
+# this selects just one value? 
 
 # GENERATING INFORMATION OF POWER OF STATISTICAL TESTS ----
 
