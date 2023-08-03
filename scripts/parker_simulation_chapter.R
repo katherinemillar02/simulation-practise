@@ -78,6 +78,8 @@ while(count < n) {  # count of 0 < n - while = loop syntax
   return(x)
 }
 
+sample = accept_reject(triangle_frame, 1000)
+
 # testing out simulated code 
 # could not find function fx?? 
 # may need to find n 
