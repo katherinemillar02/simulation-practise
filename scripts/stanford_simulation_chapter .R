@@ -325,6 +325,14 @@ mean(outcomes)
 
 # GAMMA DISTRIBUTION SAMPLING: GENERATING POISSON DISTRIBUTION ----
 
+# generating the means of a poisson distribution
+# sampling FROM a gamma distribution 
+lambdas <- rgamma(100, shape = 2, rate = 1, scale = 3/1)x
+
+
+
+
+
 # GENERATING INFORMATION OF POWER OF STATISTICAL TESTS ----
 
 
