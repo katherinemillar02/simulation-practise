@@ -216,8 +216,48 @@ ggplot(data.frame(data=c(combined), labels=rep(c("combined"), c(3e6))), aes(x=co
 
 # GENERATING MULTIVARIATE NORMAL CLUSTERS ----
 
+# generating different clusters
+# two clusters with 100,000 points each 
+
+# loading in additional package: MASS
+library(MASS) # package used for estimating linear models 
+
+# making a table 
+Sigma <- matrix(c(5,3,3,2),2,2) # creates a table of 2 by 2 
+
+# running this table
+Sigma # painful cap locks needed 
+
+# generating samples 
+ex1 <- mvrnorm(100000, rep(0,2), Sigma) # part of the MASS package 
+# multivariate normal distribution 
+# 100,000 samples 
+# rep code will 
+
+# running this 
+ex1
+
+# making a new cluster
+Sigma2 <- matrix(c(9, -5, -1,5),2,2)
+
+# running sigma code 
+Sigma2
+
+# code for new cluster 
+ex2 <- mvrnorm(100000, rep(3,2), Sigma2)
+# rep - creates a vector of length 2 - where both elements have the value of 3? 
+
+# running new cluster 
+ex2
+
+# PLOTTING CLUSTERS TOGETHER 
+
+# ggplot
+# geom_density2d 
+
 
 # MONTE CARLO SIMULATIONS ----
+
 
 
 
