@@ -483,7 +483,24 @@ ggplot(results_table) +
 # there is SYMMETRIC DISTRIBUTION
 # symmetric distribution is particulary good here; 
 # 100 tosses = 50 heads 
-# shows number of heads will be between 25-65
+# shows number of heads will be between 35-65
+
+
+# simulating - doubling
+
+# using an example of 'counting grains" 
+
+# using sample function - look at count with PROB of count
+sample(c(-1,0,1), 1, prob = c(1/4, 2/4, 1/4)) 
+# counting one less (-1) = prob of 1/4 
+# counting right (0) = prob of 2/4
+# counting one more (1) = prob of 1/4 
+
+# Gives 0 as the result but this can change 
+# most likely to be 0 as the prob = 2/4 
+
+
+
 
 # REPLICATES AND OUTCOMES ----
 
