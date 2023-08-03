@@ -624,15 +624,20 @@ accumulate(1:6, \(acc, nxt) acc + 10, .init = 10)
 
 # using grain data for accumulation 
 
-
+# function of a ccumulation of grains 
 accumulation_grains <- function(grains_now) {
   grains_new <- grains_now + clerks_calculation(grains_now)
   return(max(1, grains_new))
 }
 
+# code will not work alone but is for -- other code 
 accumulation_grains()
 
-# code brokem 
+# putting this function into new accumlation code 
+accumulate(1:10, \ (acc, nxt) accumulation_grains(acc), .init = 1)
+# code uses the made function to see grains accumulated 
+# .init value as 1 - and asks for 10 values 
+# starts at one? 
 
 # REPLICATES AND OUTCOMES ----
 
