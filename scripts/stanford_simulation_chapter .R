@@ -355,6 +355,9 @@ power <- function(n, sigma, trialnumber) {
   return(mean(abs(statistics) >= qnorm(0.975)))
 }
 
+set.seed(0)
 
-                  
+power(3, 0.5, 1000)
+# result is 0.685 
+# code cannot run alone as a function 
                   
