@@ -596,9 +596,40 @@ fruits <- c("apple", "orange", "strawberries", "grapes")
 # function that receives 2 arguments 
 # acc = accumulator 
 # nxt = next element in the input vector 
-# str_c = two arguments, colon as a seperator - joins all results 
+# str_c = two arguments, colon as a separator - joins all results 
 
+# using function together 
+accumulate(fruits, \(acc, nxt) str_c(acc, nxt , sep = ":")) |> last()
+# or 
+last(accumulate(fruits, \(acc, nxt) str_c(acc, nxt , sep = ":")))
 
+# this code generates the codes put into fruits  a : format 
+
+# to see that something is accumulating, can use a value to show this
+accumulate(fruits, \(acc, nxt) str_c(acc, nxt, sep = ":"), .init = "a")
+  # shows how it accumulates over time 
+
+# can sometimes not use nxt - if you don't want the number of steps 
+
+# looking at numbers with accumulate and adding 10 each time
+accumulate(541:546, \(acc, nxt) acc + 10, .init = 10)
+# ACCUMULATION of 10 each time 
+
+# testing accumulation - termination? 
+accumulate(1:6, \(acc, nxt) acc + 10, .init = 10)
+# still the same - DOES NOT CHANGE 
+
+# accumulate can also be used for DOUBLING, like previous 
+# one ERROR will cause affect for the days after (2nd scenario)
+
+# using grain data for accumulation 
+
+accumulation_grains <- function(grains_now) {
+  grains_new <- grains_now + clerks_calculation(grains_new)
+  return(max(1, grains_new))
+}
+
+accumulation_grains()
 
 
 # REPLICATES AND OUTCOMES ----
