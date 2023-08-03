@@ -663,10 +663,37 @@ repgrains_table <- tibble(
 # visualising the results with a histogram to look for symmetry 
 ggplot(repgrains_table) +
   geom_histogram(aes(x = replicated_grains, y = after_stat(density)),
-bins = 18, colour = "black", fill = "green" ) +
+  bins = 18, colour = "black", fill = "green" ) +
   geom_point(aes(x = 1023, y = 0), colour = "pink", size = 3)
-  
+ 
+# distribution shows 0-2000 but is mostly symmetrical  
+# majority of results clustered in the middle! 
+# normal distribution 
 
+# BIRTHDAY PARADOX 
+# 23 students in a class - 50/50 chance that two students have the same birthday 
+# 365 birthdays/ year = finding 2 of them that have the same birthday? 
+
+# loading in packages
+library(tidyverse) # tidyverse needed for this 
+
+# 365 birthdays - all equally likely to occur 
+# number of possible birthday combinations 
+
+# 23 students have a free choice of birthday - but less choice as students choose
+# can look at this from a df P.O.V
+
+# simulating a value of choice for this 
+chosen_bday <- sample(1:365, size = 23, replace = TRUE)
+
+# running code results 
+chosen_bday
+
+# looking for if any student chose the same birthday (duplicates)
+sum(duplicated(chosen_bday))
+# result says 0 
+
+# puttin
 
 # REPLICATES AND OUTCOMES ----
 
