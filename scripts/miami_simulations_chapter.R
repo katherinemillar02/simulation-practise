@@ -754,9 +754,22 @@ ggplot(bday_trial_table) +
 # centre of symmetry is 0.51 - correct and lines up with birthday paradox!!
 
 
-
-
 # REPLICATES AND OUTCOMES ----
+
+# SIMULATION EXERCISES 
+library(tidyverse)
+library(edsdata) # package not available? 
+library(gapminder) 
+
+# Question 1
+# 1.1 
+# PROBABILITIES 
+  # jumping fish any day
+# blue heron any day
+# squirrel any day
+
+
+
 
 
 
