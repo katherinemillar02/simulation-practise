@@ -426,5 +426,34 @@ ggplot(results_table)+
 # only coming up with 51? 
 # error with code 
 
+# 
+# trying to troubleshoot to understand why the simulated numbers aren't being replaced 
+sidez <- c("heads", "tails")
+tossez <- sample(sides, size = 8, replace = TRUE)
+tossez
+sum(tossez == "heads")
+outcomes <- sample(sidez, size = 100, replace = TRUE)
+num_heads <- sum(outcomes == "heads")
+num_heads
+one_trial <- function() {
+  outcomes <- sample(sidez, size = 100, replace = TRUE)
+  num_heads <- sum(outcomes == "heads")
+  return(num_heads)
+} 
+one_trial()
+# Number of repetitions
+num_repetitions <- 10000
+
+# simulate the experiment!
+heads <- replicate(n = num_repetitions, one_trial())
+length(heads)
+heads[1]
+heads[6]
+# THIS CODE CHANGES !!!!!!!
+
+
 # REPLICATES AND OUTCOMES ----
+
+
+
 
