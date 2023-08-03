@@ -335,9 +335,9 @@ lambdas <- rgamma(100, shape = 2, scale = 3)
 samples <- rep(0, 100)
 # 0 what you want to replicate and the amount of replicates 100? 
 
-for (i in 1:100) 
+for (i in 1:100) # i: iteration, loop value of 1 - 100 
   
-  samples[i] <- rpois(1, lambdas[i])
+  samples[i] <- rpois(1, lambdas[i]) # using lambda as the vector 
 
 
 # GENERATING INFORMATION OF POWER OF STATISTICAL TESTS ----
