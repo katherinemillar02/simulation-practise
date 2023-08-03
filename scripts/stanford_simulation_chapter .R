@@ -269,6 +269,14 @@ dice_trial <- function(dicenumber, sidenumber, target, trialnumber) {
   apply(matrix(sample(1:sidenumber, dicenumber*trialnumber, replace = TRUE), nrow = dicenumber, 2, sum)) >= target
 }
 
+# code broken
+
+# setting the seed for repeatability 
+set.seed(0)
+
+outcomes <- dice_trial(2, 6, 7,5)
+
+mean(outcomes)
 
 
 
