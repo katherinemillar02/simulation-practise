@@ -505,16 +505,78 @@ sample(c(-1,0,1), 1, prob = c(1/4, 2/4, 1/4))
 # total amount received 
 
 # writing the function
-clerks_calculation <- function(grains) {
-  grains + sample(c(-1,0,1), 1, prob = c(1/4, 2/4, 1/4)) 
+clerks_calculation <- function(grains) { # putting grains as a value in function 
+  grains + sample(c(-1,0,1), 1, prob = c(1/4, 2/4, 1/4))  # putting sample probability in function
 }
 
 # running the function - giving amount of grains 
-clerks_calculation(10)
+
 # running code multiple times shows counted 9-11 
 # sometimes undercounted and sometimes overcounted
 # lines up with the function/ probability 
 
+
+# 2 ^ day number 1 - writing this form in code 
+2 ** (0:9)
+# this is actually day 1 - 10 but considers (-1)
+
+# shows how many received after each day - obviously increases 
+
+# using purr (from tidyverse) - gives frames 
+
+# using purr - map to simulate amounts after clerk's simulation
+
+# loading package in 
+library(purrr)
+
+# 
+map_dbl(2 ** (0:9), clerks_calculation) # applys function to each vector 
+# gives similar results to just 2 ** (0:9)
+
+# then using this map-dbl function to get a sum
+# code option 1 
+map_dbl(2 ** (0:9), clerks_calculation) |> sum()
+# code option 2 
+sum(map_dbl(2 ** (0:9), clerks_calculation))
+
+# both of these work 
+# code simply adds the grains from all days up? but what the point 
+
+# writing function for OVERALL grains over 10 days 
+overall_grains_received <- function(days) {
+  sum(map_dbl(2 ** (0:9), clerks_calculation))
+  
+}
+# running code - over 10 days - the grains received 
+overall_grains_received(10)
+# gives different outcome
+
+# my confusion atm - i thought the 2 ** (0:9) gives grains + grains from the day before 
+# otherwsie why is there so much difference in each day 
+# the total isnt really the total? 
+
+# Looking at variability of the simulation 
+repetitions <- 1000
+# using replicate to simulate experiment (with repeats)
+grains <- replicate(n = repetitions, overall_grains_received(10))
+# code will do the 10 day function simulation but will give 1000 results 
+
+# putting these repeats into a tibble table
+results_table <- tibble(
+  repetition = 1:repetitions,
+  grain_number = grains
+)
+
+# running table 
+results_table
+
+# visualising these results 
+ggplot(results_table) +
+  geom_histogram(aes(x = grain_number, y = after_stat(density)),
+                 colour = "black", fill = "green", bins = 18) +
+  geom_point(aes(x = 1023, y = 0), colour = "yellow", size = 3)+
+  theme_classic() 
+# call the own average 1023 - where the point is 
 
 
 # REPLICATES AND OUTCOMES ----
