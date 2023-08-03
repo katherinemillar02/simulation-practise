@@ -280,6 +280,49 @@ mean(outcomes)
 
 
 
+# TROUBLESHOOTING FOR ERROR IN SIMULATION 
+isEvent = function(numDice, numSides, targetValue, numTrials){
+  apply(matrix(sample(1:numSides, numDice*numTrials, replace=TRUE), nrow=numDice), 2, sum) >= targetValue
+}
+
+set.seed(0)
+#try 5 trials
+outcomes = isEvent(2, 6, 7, 5)
+mean(outcomes)
+
+# This code runs fine - updating poissible mistakes in own code 
+dice_trial <- function(dicenumber, sidenumber, target, trialnumber) {
+  apply(matrix(sample(1:sidenumber, dicenumber*trialnumber, replace = TRUE), nrow = dicenumber), 2, sum) >= target
+}
+
+# setting seed for repeatability 
+set.seed(0)
+
+# selecting numbers to run with the dice trial function 
+outcomes <- dice_trial(2, 6, 7,5)
+
+# calculating a mean of these outcomes 
+mean(outcomes)
+
+# using the parallel package for simulations 
+library(parallel)
+
+# running similar code but this time with PARALLLEL and sapply()
+parallel_dice <- function(dice_number, sidenumber, target, trialindicies) {
+  sapply(1:length(trialindicies), function (x) sum(sample(1:sidenumber, dice_number, replace = TRUE)) >= target)
+} 
+
+parallel_dice()
+
+# setting the seed for repeatability 
+set.seed(0)
+
+# running new outcome code - this time with x instead of final number 
+outcomes <- pvec(1:10000, function(x) parallel_dice(2,6,7,x))
+
+# mean of this result
+mean(outcomes)
+
 # GAMMA DISTRIBUTION SAMPLING: GENERATING POISSON DISTRIBUTION ----
 
 # GENERATING INFORMATION OF POWER OF STATISTICAL TESTS ----
