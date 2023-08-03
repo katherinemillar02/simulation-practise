@@ -80,7 +80,7 @@ while(count < n) {  # count of 0 < n - while = loop syntax
   return(x)
 }
 
-
+#nRUNNING ACCEPT - REJECT EQUATION 
 sample = accept_reject(triangle_frame, 10000)
 
 
