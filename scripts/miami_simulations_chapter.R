@@ -577,6 +577,10 @@ ggplot(results_table) +
   geom_point(aes(x = 1023, y = 0), colour = "yellow", size = 3)+
   theme_classic() 
 # call the own average 1023 - where the point is 
+# results are affected by the doubling effect 
+
+# Accumulation
+
 
 
 # REPLICATES AND OUTCOMES ----
