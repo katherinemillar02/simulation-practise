@@ -639,6 +639,14 @@ accumulate(1:10, \ (acc, nxt) accumulation_grains(acc), .init = 1)
 # .init value as 1 - and asks for 10 values 
 # starts at one? 
 
+# writing a new function for TOTAL grains accumulated over 10 days 
+total_grains <- # naming function 
+  function(days) { # object is days (grains over days)
+    last(accumulate(1:10, \ (acc, nxt) accumulation_grains(acc), .init = 1)) 
+  }
+
+total_grains()
+
 # REPLICATES AND OUTCOMES ----
 
 
