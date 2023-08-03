@@ -751,7 +751,7 @@ ggplot(bday_trial_table) +
   geom_point(aes(x = 0.51, y = 0), colour = "pink", size = 3)+
   theme_classic()
 
-# centre of symmetry is 0.51 - correct and lines up with birthday paradox!!B
+# centre of symmetry is 0.51 - correct and lines up with birthday paradox!!
 
 
 
