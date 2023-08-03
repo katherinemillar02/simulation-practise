@@ -353,8 +353,8 @@ tosses_2
 # seeing sums of heads and tails again
 
 # heads
-head_sum <- sum(tosses_2 == "heads")  
-
+number_of_heads <- sum(tosses_2 == "heads")  
+number_of_heads
 # tails 
 tails_sum <- sum(tosses_2 == "tails") 
 
@@ -362,17 +362,14 @@ tails_sum <- sum(tosses_2 == "tails")
 # REPLICATE will elimiate the need to do for loops
 
 
-# experirment - seeing how many heads with one simulationm
-set.seed(431)
-
-results_5 <- sample(sides, size = 100, replace = TRUE)
+results_5 <- sample(sidez, size = 100, replace = TRUE)
 # works 
 
 heads_sum <- sum(results_5 == "heads", replace = TRUE)
 
 one_experiment <- function() {
-  results_5  <- sample(sides, size = 100, replace = TRUE)
-  heads_sum <- sum(results_5 == "heads", replace = TRUE)
+  results_5  <- sample(sidez, size = 100, replace = TRUE)
+  heads_sum <- sum(results_5 == "heads")
   return(head_sum)
 }
 
@@ -392,7 +389,7 @@ one_experiment()
 rep_n <- 10000
 
 # repeating the above simulation 10 k times
-second_experiment <- replicate(1000, one_experiment())
+second_experiment <- replicate(n = nrep, one_experiment())
 # FIXED - REMEMEBR ()
 
 second_experiment # still the same 
@@ -428,15 +425,23 @@ ggplot(results_table)+
 
 # 
 # trying to troubleshoot to understand why the simulated numbers aren't being replaced 
-sidez <- c("heads", "tails")
-tossez <- sample(sides, size = 8, replace = TRUE)
-tossez
-sum(tossez == "heads")
-outcomes <- sample(sidez, size = 100, replace = TRUE)
+sides <- c("heads", "tails")
+
+# CODE THAT WORKS BUT GO BACK AND EDIT 
+tosses <- sample(sides, size = 8, replace = TRUE)
+
+tosses 
+
+sum(tosses == "heads")
+
+outcomes <- sample(sides, size = 100, replace = TRUE)
+
 num_heads <- sum(outcomes == "heads")
+
 num_heads
+
 one_trial <- function() {
-  outcomes <- sample(sidez, size = 100, replace = TRUE)
+  outcomes <- sample(sides, size = 100, replace = TRUE)
   num_heads <- sum(outcomes == "heads")
   return(num_heads)
 } 
@@ -449,6 +454,8 @@ heads <- replicate(n = num_repetitions, one_trial())
 length(heads)
 heads[1]
 heads[6]
+# different values 
+heads
 # THIS CODE CHANGES !!!!!!!
 
 
