@@ -192,3 +192,22 @@ geom_line(colour = "green", size = 1.4) + xlab("x") + ylab("pdf") +
                  color = "red")+
   theme_classic()
 
+
+# SIMULATION STUDIES // EXPERIMENTS 
+
+
+# setting the seed for reproducible results
+set.seed(5) 
+
+# 
+t.test.sim <- function(n = 30, N = 1000) { # SETTING A FUNCTION CALLED t-test simulation 
+  reject <- logical(N) # seeing if given sample leads to a rejection of the null hypothesis 
+  for (i in 1:N) {
+    x <- rexp(n, rate = 1)
+    t.test.p.value <- t.test(x, mu = 1, alternative = "less")$p.value
+    reject[i] <- (t.test.p.value < 0.05)
+  }
+  mean(reject)
+}
+
+t.test.sim()
