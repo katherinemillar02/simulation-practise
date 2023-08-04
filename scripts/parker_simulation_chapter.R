@@ -136,10 +136,6 @@ sample_mc <- mc_function(alphalol, 5000, 10000, 10) # calculating the acceptance
 # generating samples 
 sample_mc
 
-# 
-f_true <- function(x) { # onl
-  exp(- x ^ 4) * (1 + abs(x)) ^ 3
-}
 
 # 5000
 #the number of burn-in iterations.
@@ -151,3 +147,10 @@ f_true <- function(x) { # onl
 # the thinnig factor 
 
 # SIMULATIONS FROM STUDIES/ EXPERIMENTS (simulations from models) ----
+
+
+
+# 
+f_true <- function(x) { # onl
+  exp(- x ^ 4) * (1 + abs(x)) ^ 3
+}
