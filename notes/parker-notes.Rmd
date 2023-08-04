@@ -72,3 +72,16 @@ The Accept-Reject algorithm:
 -	This is a method of generating a random sample from a probability distribution 
 -	This is done by first generating a proposal sample from an “envelope” distribution, this will be easy to sample from. From this, deciding whether or not to accept or reject this sample 
 
+The rejection method
+-	Used to explain generating random samples from a probability distribution 
+-	Uses a simple example involving a continuous random variable with a specific probability density function 
+
+Example 
+-	Continuous random variable (X) – this can take on any real number value 
+-	With probability density function (pdf) described as  fx 
+-	The pdf fx is concentrated on the interval (0,2) 
+-	Values of X are more likely to be found within this interval 
+-	METAPHOR: (sprinkling): randomly placing points under the curve of the pdf fx 
+-	Points are scattered randomly across the interval (0,2)
+-	Any small section of the curve has an equal chance of having a point land on it 
+
