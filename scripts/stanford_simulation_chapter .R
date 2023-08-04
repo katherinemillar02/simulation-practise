@@ -370,5 +370,7 @@ power(4,0.5,1000)
 power(5, 0.5, 1000)
 # 5 samples seems to work 
 
-
+# testing changing the sd to 5
+power(400, 5, 1000)
+# will take a lot more samples with a higher sd 
                   
