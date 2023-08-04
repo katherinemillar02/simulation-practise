@@ -39,3 +39,36 @@ Simulation experiment from a SIR epidemic model
 -	This part of the chapter will show one how to use simulations to study and analyse the dynamics of an infectious disease 
 -	This is done using an SIR model (susceptible infectious recovered) epidemic model 
 -	The SIR model is a basic compartmental model in epidemiology – describes the the spread of infectious diseases within a population 
+
+
+
+1.	Standard probability distributions 
+
+-	Generating a data from a distribution 
+-	Where a value falls from a **known** distribution 
+
+Built in distributions in R: 
+1.	Normal 
+2.	Binomial
+3.	Beta
+4.	Exponential 
+5.	Gamma
+6.	Hypergeometric 
+
+Each of these built in distributions includes these 4 options:
+1. ( r ): random number generation… rnorm()
+2. ( d ): density… dnorm ()
+3. ( p ): probability… pnorm()
+4. ( q ): quantile… qnorm()
+
+
+
+2.	Sampling from more complex distributions 
+
+-	Some techniques exist to sample from complex probability distributions, some of which are used to generate samples from the (r – random number generator) function 
+
+
+The Accept-Reject algorithm: 
+-	This is a method of generating a random sample from a probability distribution 
+-	This is done by first generating a proposal sample from an “envelope” distribution, this will be easy to sample from. From this, deciding whether or not to accept or reject this sample 
+
