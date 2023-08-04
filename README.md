@@ -16,18 +16,19 @@ In this script, I have covered the Simulation Chapter (Chapter 20) from the work
 - Simulating a linear model: simulating values from a specific model
 - Random Sampling: taking from specified objects 
 
-__2.__  **__stanford_simulation_chapter.R__** ✅       
-link to workbook: https://web.stanford.edu/class/bios221/labs/simulation/Lab_3_simulation.html        
-Released: 11/05/2023 (Last Updated) - Stanford University       
-Workbook: "Lab 3: Simulations in R"       
+__2.__  **__stanford_simulation_chapter.R__** ✅     
+This is a script for my progress through a workbook on Simulations in R, by Stanford University 🏛️.  
+Link to Workbook: https://web.stanford.edu/class/bios221/labs/simulation/Lab_3_simulation.html        
+📅Released: 11/05/2023 (Last Updated) - Stanford University       
+📚Workbook: "Lab 3: Simulations in R"       
 This covers:     
-- General random number generating
-- apply() function (Avoiding for loops)
-- Generating random 'normal' variables and mixing normal data
-- Generating DNA strings (old 'out of date' package used)
+- General random number generation
+- Utilising the **apply()** function (avoiding for loops and enhancing efficieny)
+- Generating and manipulating random 'normal' variables 
+- Experimenting with DNA string genration (old 'out of date' package used)
 - Generating Multivariate normal clusters
-- Monte Carlo Simulations
-- Gamma distribution sampling, generating poisson distribution 
+- Exploring Monte Carlo Simulations
+- Sampling from Gamma distribution and generating Poisson distribution 
 - Generating information of power of statistical tests 
 
 __3.__  **__parker_simulation_chapter.R__**       
