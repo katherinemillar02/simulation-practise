@@ -259,5 +259,8 @@ t.test.sim(500)
 
 
 
+# more known models 
+# simulating an epidemic from a SIR Model 
+# conditions = Suspecitble (not yet), Infected (have), Removed (are immune)
 
-
+# At time steps: INFECTED can affect SUSPECTIBLE or themselves can become REMOVED 
