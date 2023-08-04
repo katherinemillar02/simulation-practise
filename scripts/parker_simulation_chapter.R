@@ -80,17 +80,21 @@ while(count < n) {  # count of 0 < n - while = loop syntax
   return(x)
 }
 
-#nRUNNING ACCEPT - REJECT EQUATION 
+# loading in tidyverse package 
+library(tidyverse)
+
+
+# RUNNING ACCEPT - REJECT EQUATION 
 sample = accept_reject(triangle_frame, 10000)
 
-
-ggplot(triangle_frame, aes(x = x, y = y)) +
+# Visualising this with a histogram 
+triangle_pdf <- ggplot(triangle_frame, aes(x = x, y = y)) +
   geom_line(color = "blue", size = 1.5) + xlab("x") + ylab("pdf") +
   geom_histogram(data = data.frame(x = sample), aes(x = x, y = ..density..), col = "gray" )
 
 # not quite the data that needs to be generated
 
-# ERRORS HERE 
+# ~ ERRORS HERE ~ 
 
 
 
