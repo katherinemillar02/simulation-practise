@@ -133,6 +133,21 @@ mc_function <- function(alphalol, burnin, N, thin) { # mc function: 4 arguments
 # trying out the mc function 
 sample_mc <- mc_function(alphalol, 5000, 10000, 10) # calculating the acceptance probability 
 
+# generating samples 
+sample_mc
 
+# 
+f_true <- function(x) { # onl
+  exp(- x ^ 4) * (1 + abs(x)) ^ 3
+}
+
+# 5000
+#the number of burn-in iterations.
+# the Markov chain established by the Metropolis-Hastings algorithm 
+# is allowed to converge to the target distribution by discarding the initial samples.
+# 10000
+# the total number of iterations in the Markov chain 
+# 10
+# the thinnig factor 
 
 # SIMULATIONS FROM STUDIES/ EXPERIMENTS (simulations from models) ----
