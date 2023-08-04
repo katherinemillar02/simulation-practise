@@ -16,7 +16,7 @@ In this script, I have covered the Simulation Chapter (Chapter 20) from the work
 - Simulating a linear model: simulating values from a specific model
 - Random Sampling: taking from specified objects 
 
-__2.__  **__stanford_simulation_chapter.R__**       
+__2.__  **__stanford_simulation_chapter.R__** ✅       
 link to workbook: https://web.stanford.edu/class/bios221/labs/simulation/Lab_3_simulation.html        
 Released: 11/05/2023 (Last Updated) - Stanford University       
 Workbook: "Lab 3: Simulations in R"       
