@@ -161,7 +161,14 @@ f_true(900) # just gives result of 0?
 # integral function
 integral <- integrate(f_true, 0, Inf)
 # using integrate() function with the f_true() function 
+# used for numerical integration 
+# lower vlauer is 0 and higher value is infinity 
 
-
+# integral numerics 
 c <- 2 * integral$value 
+# calculates the value from integral x 2 
+# naming variable c
+
+
+
 
