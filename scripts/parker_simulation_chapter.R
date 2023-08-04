@@ -255,4 +255,9 @@ t.test.sim(500)
 # need a sample of 500 in order for error rate to be 5% 
 
 
+# t seems that when the data are from a population that is heavily right skewed, the one-sided (lower than alternative) t-test does not work as expected for smaller samples.
+
+
+
+
 
