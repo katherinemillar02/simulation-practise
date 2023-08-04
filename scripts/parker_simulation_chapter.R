@@ -123,10 +123,14 @@ mc_function <- function(alphalol, burnin, N, thin) { # mc function: 4 arguments
     prop <- rnorm(1, x[i - 1], 1) # INSIDE THIS LOOP
     # PROP is drawn from a normal distribution ~ centered around x[i -1], 1 sd = 1
     alpha <- min(1, alphalol(x[i- 1], prop)) # acceptance probability?
+    # previous function used to calculate alpha 
     x [i] <- ifelse(rbinom(1,1, alpha), prop, x [i-1])
-  }
+  }    # x [i] will be updated 
   return(x[burnin+ (1:N) * thin])
-}
+} # returns a subset of the x vector from burnin + thin 
+
+
+
 
 
 
