@@ -102,8 +102,14 @@ triangle_pdf <- ggplot(triangle_frame, aes(x = x, y = y)) +
 
 
 # METROPOLITAN HASTINGS ALGORITHIM 
-alpha <- function(x, y) {
-  exp(-y^4+ x^4) * (1 + abs(y)) ^ 3 * (1+ abs(x)) ^ {-3}
+# have named the function alpha, takes two input arguments (x and y)
+# calculates a value based on the formula provided, and returns it 
+alpha <- function(x, y) { # alpha function takes arguments x and y
+  exp(-y^4 + x^4) # exponential calculation of [ - (y) ^ 4 ] + [ (x) ^ 4]
+  * (1 + abs(y)) ^ 3 # absolute value of y: positive or 0 
+  # whole equation is calculated to the power of 3 
+  * (1+ abs(x)) ^ {-3}  # absolute value of x: positive or 0 
+  # whole equation is calculated to the power of -3 
 }
 
 
