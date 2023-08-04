@@ -105,14 +105,19 @@ triangle_pdf <- ggplot(triangle_frame, aes(x = x, y = y)) +
 # have named the function alpha, takes two input arguments (x and y)
 # calculates a value based on the formula provided, and returns it 
 alpha <- function(x, y) { # alpha function takes arguments x and y
-  exp(-y^4 + x^4) # exponential calculation of [ - (y) ^ 4 ] + [ (x) ^ 4]
-  * (1 + abs(y)) ^ 3 # absolute value of y: positive or 0 
+  exp(-y^4 + x^4) * (1 + abs(y)) ^ 3 * (1+ abs(x)) ^ {-3}# exponential calculation of [ - (y) ^ 4 ] + [ (x) ^ 4]
+  }   # absolute value of y: positive or 0 
   # whole equation is calculated to the power of 3 
-  * (1+ abs(x)) ^ {-3}  # absolute value of x: positive or 0 
+    # absolute value of x: positive or 0 
   # whole equation is calculated to the power of -3 
+
+
+alpha(1,2) # running code 
+
+# monte carlo function 
+mc_function <- function(alpha, burnin, N, thin) {
+  x <- numeric(burnin + N * thin)
 }
-
-
 
 
 # SIMULATIONS FROM STUDIES/ EXPERIMENTS (simulations from models) ----
