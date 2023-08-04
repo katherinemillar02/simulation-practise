@@ -373,4 +373,7 @@ power(5, 0.5, 1000)
 # testing changing the sd to 5
 power(400, 5, 1000)
 # will take a lot more samples with a higher sd 
+
+
+
                   
