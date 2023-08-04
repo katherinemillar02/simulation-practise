@@ -84,4 +84,17 @@ Example
 -	METAPHOR: (sprinkling): randomly placing points under the curve of the pdf fx 
 -	Points are scattered randomly across the interval (0,2)
 -	Any small section of the curve has an equal chance of having a point land on it 
+-	Metaphor of sprinkling points: are treated as two dimensional random variables ~ represented as Xi, Yi 
+-	Xi – represents the x-coordinate of the point 
+-	Yi – represents the y-coordinate of the point 
+-	Xi, Yi = indicate the position of points under the curve 
+
+Example: getting the random points: 
+-	Need to generate random points that follow the distribution described by fX: difficult to simulate directly 
+-	Method: simulating random points uniformly under an “envelope” distribution (h) that is easy to simulate from 
+-	The envelope distribution (h) must cover the range of fX 
+-	The envelope distribution (h), for every value, X, ( k * h )(X)  is > greater than, or equal to = fx(x). where k is constant. 
+
+
+
 
