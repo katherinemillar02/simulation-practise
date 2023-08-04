@@ -130,7 +130,8 @@ mc_function <- function(alphalol, burnin, N, thin) { # mc function: 4 arguments
 } # returns a subset of the x vector from burnin + thin 
 
 
-
+# trying out the mc function 
+sample_mc <- mc_function(alphalol, 5000, 10000, 10) # calculating the acceptance probability 
 
 
 
