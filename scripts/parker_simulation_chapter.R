@@ -94,8 +94,9 @@ triangle_pdf <- ggplot(triangle_frame, aes(x = x, y = y)) +
   geom_line(color = "blue", size = 1.5) + xlab("x") + ylab("pdf") +
   geom_histogram(data = data.frame(x = sample), aes(x = x, y = ..density..), col = "gray" )
 
-# not quite the data that needs to be generated
 
+# not quite the data that needs to be generated
+# but running the code they provide does the same 
 # ~ ERRORS HERE ~ 
 
 
