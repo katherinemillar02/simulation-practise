@@ -104,7 +104,7 @@ triangle_pdf <- ggplot(triangle_frame, aes(x = x, y = y)) +
 # METROPOLITAN HASTINGS ALGORITHIM 
 # have named the function alpha, takes two input arguments (x and y)
 # calculates a value based on the formula provided, and returns it 
-alpha <- function(x, y) { # alpha function takes arguments x and y
+alphalol <- function(x, y) { # alpha function takes arguments x and y
   exp(-y^4 + x^4) * (1 + abs(y)) ^ 3 * (1+ abs(x)) ^ {-3}# exponential calculation of [ - (y) ^ 4 ] + [ (x) ^ 4]
   }   # absolute value of y: positive or 0 
   # whole equation is calculated to the power of 3 
@@ -115,9 +115,19 @@ alpha <- function(x, y) { # alpha function takes arguments x and y
 alpha(1,2) # running code 
 
 # monte carlo function 
-mc_function <- function(alpha, burnin, N, thin) {
-  x <- numeric(burnin + N * thin)
+mc_function <- function(alphalol, burnin, N, thin) { # mc function: 4 arguments 
+  x <- numeric(burnin + N * thin) # creates numeric vector x = of length: burnin + thin (initialised with 0s)
+  x[1] <- rnorm(1)# [1] value of x, random number from  normal distribution rnorm(1) n = 1, mean =1, sd = 1
+  for (i in 2:(burnin + N * thin)) { # the loop 
+    # iterates from "2" to "burnin" + n * thin
+    prop <- rnorm(1, x[i - 1], 1) # INSIDE THIS LOOP
+    # PROP is drawn from a normal distribution ~ centered around x[i -1], 1 sd = 1
+    alpha <- min(1, alphalol(x[i- 1], prop)) # acceptance probability?
+    x [i] <- ifelse(rbinom(1,1, alpha), prop, x [i-1])
+  }
+  return(x[burnin+ (1:N) * thin])
 }
+
 
 
 # SIMULATIONS FROM STUDIES/ EXPERIMENTS (simulations from models) ----
