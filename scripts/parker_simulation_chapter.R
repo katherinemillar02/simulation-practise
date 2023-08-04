@@ -101,4 +101,12 @@ triangle_pdf <- ggplot(triangle_frame, aes(x = x, y = y)) +
 
 
 
+# METROPOLITAN HASTINGS ALGORITHIM 
+alpha <- function(x, y) {
+  exp(-y^4+ x^4) * (1 + abs(y)) ^ 3 * (1+ abs(x)) ^ {-3}
+}
+
+
+
+
 # SIMULATIONS FROM STUDIES/ EXPERIMENTS (simulations from models) ----
