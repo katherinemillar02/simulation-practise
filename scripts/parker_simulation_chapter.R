@@ -201,13 +201,42 @@ set.seed(5)
 
 # 
 t.test.sim <- function(n = 30, N = 1000) { # SETTING A FUNCTION CALLED t-test simulation 
+  
+  # n = sample size 
+  # N = simulation
+  
   reject <- logical(N) # seeing if given sample leads to a rejection of the null hypothesis 
-  for (i in 1:N) {
+  
+  # empty vector reject 
+  # of length N (1000)
+  # tracks whether the null hypothesis is rejected in each simulation 
+  
+  for (i in 1:N) { # setting a for loop 
+    # iterates 1000 times 
+    
     x <- rexp(n, rate = 1)
+    
+    # random sample - exponential of n
+    # size 30, has rate parameter of 1 
+    
     t.test.p.value <- t.test(x, mu = 1, alternative = "less")$p.value
+    
+    # one sample t test on the value x 
+    # null hypothesis assumes a means of 1 (mu = 1)
+    # the alternative hypothesis is set to "less" - this means it's a one sided test? 
+    # the $p.value = will take the p value from the t test 
+    
     reject[i] <- (t.test.p.value < 0.05)
+    # says if p value is less than 0.05 then reject null hypothesis, will come out as TRUE or FALSE 
+    
+    
   }
   mean(reject)
+  
+  # will calculate how many times out of all the simulations that the null hypothesis was rejected 
+  # gives an estimate of type 1 error rate (prob of falsley rejecting the null hypothesis)
 }
 
+# peforming the overall simulation
 t.test.sim()
+
