@@ -156,5 +156,12 @@ f_true <- function(x) {
 }
 # the input of x will determine the resulting value 
 
+f_true(900) # just gives result of 0? 
 
+# integral function
+integral <- integrate(f_true, 0, Inf)
+# using integrate() function with the f_true() function 
+
+
+c <- 2 * integral$value 
 
