@@ -149,8 +149,12 @@ sample_mc
 # SIMULATIONS FROM STUDIES/ EXPERIMENTS (simulations from models) ----
 
 
-
-# 
-f_true <- function(x) { # onl
-  exp(- x ^ 4) * (1 + abs(x)) ^ 3
+#  making a new function based on x exponentials 
+f_true <- function(x) { 
+  # only x as an argument in the function 
+  exp(- x ^ 4) * (1 + abs(x)) ^ 3 # calculating these exponentials and the absolute value 
 }
+# the input of x will determine the resulting value 
+
+
+
