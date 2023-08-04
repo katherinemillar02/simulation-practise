@@ -744,12 +744,22 @@ bday_trial_table <- tibble(
 bday_trial_table
 
 # visualising the distribution with a histogram 
-ggplot(bday_trial_table) +
+bday_trial_histogram <- ggplot(bday_trial_table) +
   geom_histogram(aes(x = bday_replicates, y = after_stat(density)),
                  colour = "red", fill = "green",
                  breaks = seq(0.35, 0.65, 0.01)) + # don't mess up these numbers 
   geom_point(aes(x = 0.51, y = 0), colour = "pink", size = 3)+
   theme_classic()
+
+
+# trying a frequency polygon with the data 
+bday_trial_polygon <- ggplot(bday_trial_table) +
+  geom_freqpoly(aes(x = bday_replicates, y = after_stat(density)),
+                colour = "red",
+                breaks = seq(0.35, 0.65, 0.01)) + # don't mess up these numbers 
+  geom_point(aes(x = 0.51, y = 0), colour = "pink", size = 3)+
+  theme_classic()
+# histogram is obvs a better visualisation of the data points - but polygon still shows the data is normally distributed 
 
 # centre of symmetry is 0.51 - correct and lines up with birthday paradox!!
 
