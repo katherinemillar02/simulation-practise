@@ -238,5 +238,21 @@ t.test.sim <- function(n = 30, N = 1000) { # SETTING A FUNCTION CALLED t-test si
 }
 
 # peforming the overall simulation
-t.test.sim()
+t.test.sim() # with the default n = 30
+
+# changing the n value 
+
+# trying n value of 50
+t.test.sim(50)
+
+# trying n value of 100 
+t.test.sim(100) # even worse 
+
+# going more up - trying an n value of 500
+t.test.sim(500) 
+# WORKS 
+
+# need a sample of 500 in order for error rate to be 5% 
+
+
 
