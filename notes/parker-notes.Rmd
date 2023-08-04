@@ -92,8 +92,25 @@ Example
 Example: getting the random points: 
 -	Need to generate random points that follow the distribution described by fX: difficult to simulate directly 
 -	Method: simulating random points uniformly under an “envelope” distribution (h) that is easy to simulate from 
+Example using numbers: 
+~ DENSITY ~ UNIFORM DISTRIBUTION: 
+h = 0.5 
+0 < X < 2 
+On the co-ordinates (0,2)
+
+Let k be: kh ≥ fX 
+And 
+Y ~ U(0, kh(x)) 
+
+
+
 -	The envelope distribution (h) must cover the range of fX 
 -	The envelope distribution (h), for every value, X, ( k * h )(X)  is > greater than, or equal to = fx(x). where k is constant. 
+-	If you give an X value, a Y value can be simulated from a uniform distribution u(0, k * h(X)) = this generates the co-ordiante (X, Y) 
+-	Where X is determined by the original value, Y is randomly generated from the uniform distribution over a certain interval defined by k * h(X) 
+
+ 
+
 
 
 
