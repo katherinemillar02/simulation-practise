@@ -169,6 +169,18 @@ c <- 2 * integral$value
 # calculates the value from integral x 2 
 # naming variable c
 
+f_true_2 <- function(x) { 
+  # only x as an argument in the function 
+  exp(- x ^ 4) * (1 + abs(x)) ^ 3 / c # calculating these exponentials and the absolute value 
+}
+# the input of x will determine the resulting value
 
+# calulating the f function again but dividing by the new c 
+
+# visualising this data 
+
+# first creating a new data frame with the collected data 
+f_true_2__df <- data.frame(x = seq(-2,2, length = 100),
+                            y = f_true_2(seq(-2,2, length = 100)))
 
 
