@@ -14,6 +14,8 @@ qnorm(0.975) # p = 0.975, mean = 0, sd = 1 (as is default)
 # SAMPLING FROM COMPLEX DISTRIBUTIONS ----
 # Accept reject algorithim 
 
+# pdf = probability density function 
+
 # generating 
 triangle <- 
   function(x) {
