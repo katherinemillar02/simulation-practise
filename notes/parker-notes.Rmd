@@ -1,0 +1,41 @@
+---
+title: "parker-notes"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+**Parker Simulation Chapter**      
+
+Introduction to simulations: 
+
+Simulations will allow: 
+-	Statistical inference to complex models 
+-	Estimate quantities that can’t be carried out analytically 
+-	Make predictions from certain scenarios (such as the outcome of an event) 
+
+Covered in **Parker Simulation Chapter**      
+-	Simulating a sample from common probability distributions (creating data that will occur in a certain way from different types of distribution) 
+-	Simulation experiments for sampling distributions (using statistical methods to make predictions) 
+-	Simulation experiments for type I error rates and power calculations (can test the performance of a statistical test) 
+
+Simulating from non-standard distributions (Accept-Reject and MCMC): these do not have straightforward mathematical formulas for generating random values.
+
+Accept-Reject method: 
+-	Will generate random samples from a difficult to sample distribution (instead uses a simpler distribution)
+-	This simpler distribution will surround the target distribution 
+-	Random samples are drawn from the simpler distribution, samples are accepted or rejected based on a certain criteria 
+-	Accepted samples used as samples from the target distribution 
+
+Markov Chain Monte Carlo (MCMC)
+-	Broad class of techniques: includes several algorithms used to generate samples from complex distributions 
+-	Constructs a Markov chain (a sequence of states) – distribution of states converges to the desired target distribution 
+-	Powerful method for simulating from distributions that are challenging to the sample directly
+
+Simulation experiment from a SIR epidemic model 
+-	This part of the chapter will show one how to use simulations to study and analyse the dynamics of an infectious disease 
+-	This is done using an SIR model (susceptible infectious recovered) epidemic model 
+-	The SIR model is a basic compartmental model in epidemiology – describes the the spread of infectious diseases within a population 
