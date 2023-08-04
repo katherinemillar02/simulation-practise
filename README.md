@@ -6,7 +6,7 @@ This is my GitHub repository for learning and going through certain simulation c
 
 This includes links to the relevant workbooks and resources and my scripted solutions for task completion. 
 
-__1.__  **__peng_simulation_chapter.R__** ✅   
+### 1. peng_simulation_chapter.R  ✅   
 Link to Workbook: https://bookdown.org/rdpeng/rprogdatascience/simulation.html      
 Released: 31/05/20222 - Roger D. Peng         
 Workbook: "R Programming for Data Science"           
@@ -31,7 +31,7 @@ This covers:
 - Sampling from Gamma distribution and generating Poisson distribution 
 - Generating information of power of statistical tests 
 
-__3.__  **__parker_simulation_chapter.R__**       
+### 3. parker_simulation_chapter.R    
 link to workbook: https://users.phhp.ufl.edu/rlp176/Courses/PHC6089/R_notes/simulations.html#standard-probability-distributions       
 Released: 31/08/2020 - Dr. Robert Parker            
 Workbook: "Introduction to R, lecture Notes"     
@@ -40,7 +40,7 @@ Simulation Chapter (Chapter 13) covers:
 - Sampling from complex distributions (accept-reject, student's t-test)
 - Doing simulations from studies and experiments (including from models)
 
-__4.__  **__intro_to_sims_in_R_github.R__** ✅    
+### 4. intro_to_sims_in_R_github.R  ✅    
 link to workbook: https://github.com/MalikaIhle/Introduction-Simulations-in-R    
 Released: 14/12/2022 (Last Updated) - Malika Ihle                     
 Workbook: "Introduction to Simulations in R" (GitHub Workbook)    
@@ -50,7 +50,7 @@ This covers:
 - Simulating an effect (t-tests)
 - Simulating for a preregistration
 
-__5.__  **__miami_simulations_chapter.R__** ✅  
+### 5. miami_simulations_chapter.R  ✅  
 link to workbook: https://ds4world.cs.miami.edu/building-simulations.html     
 Released: ../../2021  - University of Miami                        
 Workbook: “Exploring Data Science with R and the Tidyverse: A Concise Introduction”     
