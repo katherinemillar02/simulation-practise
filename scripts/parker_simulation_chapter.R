@@ -287,10 +287,13 @@ SIRsim <- function(a, b, N, T) {
   I[1]<- 1 # I is 1 infectious individual 
   R[1] <- 0 # R is 0 recovered individuals 
   # starting a simulation for loop 
-  for (i in 1:T) { # a loop runs from 1 : T
-    S[i+1] <- rbinom(1, S[i], (1-a)^I[i])
+  for (i in 1:T) { # a loop runs from 1 : T - epidemic progression at each time step 
+    S[i+1] <- rbinom(1, S[i], (1-a)^I[i]) # random binomial distribution 
+    # the number of suspectible individuals after potential exposure to infectious indiviudals 
     R[i+1] <-  R[i] + rbinom(1, I[i], b)
+    # the number of recovered indiciduals  - binomial distribution
     I[i+1] <- N + 1- R[i+1] - S[i+R]
+    # the difference between the the initial total population, recov, and newly sus individuals  
   }
-  return(data.frame(S=S,I=I, R=R))
+  return(data.frame(S=S,I=I, R=R)) # results for all sus, infec, recov
 } 
