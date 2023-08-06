@@ -280,12 +280,14 @@ SIRsim <- function(a, b, N, T) {
   I <- rep(0, T+1)
   R <- rep(0, T+1)
   # 3 vectors in the code: S, I, R
-  # with lengths: T+1 = stores number of sus, infectious, rec
+  # with lengths: T+1 = stores number of sus, infectious, recovered 
   # matrix size = (T+1)*3 - columns S, I, R / respectively 
-  S[1] <- N
-  I[1]<- 1
-  R[1] <- 0 
-  for (i in 1:T) { 
+  # setting
+  S[1] <- N  # S is N suspectible individuals 
+  I[1]<- 1 # I is 1 infectious individual 
+  R[1] <- 0 # R is 0 recovered individuals 
+  # starting a simulation for loop 
+  for (i in 1:T) { # a loop runs from 1 : T
     S[i+1] <- rbinom(1, S[i], (1-a)^I[i])
     R[i+1] <-  R[i] + rbinom(1, I[i], b)
     I[i+1] <- N + 1- R[i+1] - S[i+R]
