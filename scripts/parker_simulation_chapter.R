@@ -263,4 +263,17 @@ t.test.sim(500)
 # simulating an epidemic from a SIR Model 
 # conditions = Suspecitble (not yet), Infected (have), Removed (are immune)
 
-# At time steps: INFECTED can affect SUSPECTIBLE or themselves can become REMOVED 
+
+
+# At different time steps: INFECTED can affect SUSPECTIBLE or themselves can become REMOVED 
+
+SIRsim <- function(a, b, N, T) {
+  # function for simulation of SIR epidemic 
+  # a: infection rate
+  # b: removal rate
+  # N: initial susectibles - 1 initial infected 
+  # T: simulation length   
+  S <- rep(0, T+1)
+  I <- rep(0, T+1)
+  R <- rep(0, T+1)
+} 
