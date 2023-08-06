@@ -362,6 +362,9 @@ SIR1 <- ggarrange(S1, I1, R1, ncol = 1) # similar to patchwork,  combines plots
 # will annotate arranged figure - overrides name 
 SIR1 <- annotate_figure(SIR1, top = "alpha = 0.0005 beta = 0.1")
 
+# saving figure 
+ggsave("figures/SIR1.png", type="cairo", width=12, height=7, units="in", dpi=600)
+
 
 S2 <- simulationdata %>% 
   filter(simulationnumber == 2) %>% 
