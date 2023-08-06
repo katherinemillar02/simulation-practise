@@ -184,14 +184,17 @@ f_true_2_df <- data.frame(x = seq(-2,2, length = 100),
                             y = f_true_2(seq(-2,2, length = 100)))
 
 
+
 # visualising data 
 # plot 
-f_true_plot <- ggplot(f_true_2_df, aes(x, y)) +
+f_true_plot_parker <- ggplot(f_true_2_df, aes(x, y)) +
 geom_line(colour = "green", size = 1.4) + xlab("x") + ylab("pdf") +
   geom_histogram(data = data.frame(x = sample), aes(x = x, y = ..density..),
                  color = "red")+
   theme_classic()
 
+# saving plot 
+ggsave("figures/f_true_plot_parker.png", type="cairo", width=12, height=7, units="in", dpi=600)
 
 # SIMULATION STUDIES // EXPERIMENTS 
 
