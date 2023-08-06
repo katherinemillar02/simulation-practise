@@ -279,6 +279,8 @@ SIRsim <- function(a, b, N, T) {
   S <- rep(0, T+1)
   I <- rep(0, T+1)
   R <- rep(0, T+1)
+  # 3 vectors in the code: S, I, R
+  # with lengths: T+1 = stores number of sus, infectious, rec
   # matrix size = (T+1)*3 - columns S, I, R / respectively 
   S[1] <- N
   I[1]<- 1
