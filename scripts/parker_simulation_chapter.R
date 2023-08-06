@@ -359,4 +359,32 @@ R1 <- simulationdata %>%
 
 SIR1 <- ggarrange(S1, I1, R1, ncol = 1) # similar to patchwork,  combines plots
 
+# will annotate arranged figure - overrides name 
 SIR1 <- annotate_figure(SIR1, top = "alpha = 0.0005 beta = 0.1")
+
+
+S2 <- simulationdata %>% 
+  filter(simulationnumber == 2) %>% 
+  ggplot(aes(x = time, y = S)) +
+  geom_line() + xlab("") + ylab("S(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+
+I2 <- simulationdata %>% 
+  filter(simulationnumber == 2) %>% 
+  ggplot(aes(x = time, y = S)) +
+  geom_line() + xlab("") + ylab("I(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+
+R2 <- simulationdata %>% 
+  filter(simulationnumber == 2) %>% 
+  ggplot(aes(x = time, y = R)) +
+  geom_line() + xlab("") + ylab("I(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+
+SIR2 <- ggarrange(S2, I2, R2, ncol = 1)
+
+SIR2 <- annotate_figure(SIR2, top = "alpha = 0.0005 beta = 0.2" )
+
