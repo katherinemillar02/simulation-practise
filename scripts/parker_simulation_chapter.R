@@ -302,15 +302,29 @@ SIRsim <- function(a, b, N, T) {
 # setting seed fpr repeatability 
 set.seed(500)
 
+# running different SIR simulations 
+# remembering the parameters: a, b, N, T)
+# infection rates set the same
+# removal rate is up by 0.1 each simulation
+# initial suspectibles : 1000?
+# simulation length 100? 
 sim1 <- SIRsim(0.0005, 0.1, 1000, 100 )
 sim2 <- SIRsim(0.0005, 0.2, 1000, 100 )
 sim3 <- SIRsim(0.0005, 0.3, 1000, 100 )
 sim4 <- SIRsim(0.0005, 0.4, 1000, 100 )
 
+# combining the simulation results
 simulationdata <- as.data.frame(rbind(sim1, sim2, sim3, sim4))
+# setting the object as simulation data 
+# making a data frame binding these 4 simulations
 
+# selecting objects from this data of sim number 
 simulationdata$simulationnumber <- rep(c(1,2,3,4), each = 101)
+# selecting objects from this data of time 
 simulationdata$time <- rep(1:101, times = 4)
+
+# runbning this simulation again to include the new info
+simulationdata
 
 library(gridExtra) # from dplyr 
 
