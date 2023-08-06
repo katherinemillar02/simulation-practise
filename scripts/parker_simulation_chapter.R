@@ -297,3 +297,22 @@ SIRsim <- function(a, b, N, T) {
   }
   return(data.frame(S=S,I=I, R=R)) # results for all sus, infec, recov
 } 
+
+
+# setting seed fpr repeatability 
+set.seed(500)
+
+sim1 <- SIRsim(0.0005, 0.1, 1000, 100 )
+sim2 <- SIRsim(0.0005, 0.2, 1000, 100 )
+sim3 <- SIRsim(0.0005, 0.3, 1000, 100 )
+sim4 <- SIRsim(0.0005, 0.4, 1000, 100 )
+
+simulationdata <- as.data.frame(rbind(sim1, sim2, sim3, sim4))
+
+simulationdata$simulationnumber <- rep(c(1,2,3,4), each = 101)
+simulationdata$time <- rep(1:101, times = 4)
+
+library(gridExtra) # from dplyr 
+
+library(ggpubr)
+
