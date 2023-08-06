@@ -1,6 +1,6 @@
 # Exploring Simulations in R 🕹
 
-This is my GitHub repository dedicated to learning more about simulations in R. Within this repository are scripts going through different Simulation Chapters, sourced from R workbooks, as well Simulation GitHub repositories. 
+This is my GitHub repository dedicated to learning more about simulations in R. Within this repository are scripts with detailed comments going through different Simulation Chapters, sourced from R workbooks, as well Simulation GitHub repositories. 
 
 ## Scripts 📝
 
