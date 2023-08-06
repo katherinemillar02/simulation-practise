@@ -359,4 +359,4 @@ R1 <- simulationdata %>%
 
 SIR1 <- ggarrange(S1, I1, R1, ncol = 1) # similar to patchwork,  combines plots
 
-
+SIR1 <- annotate_figure(SIR1, top = "alpha = 0.0005 beta = 0.1")
