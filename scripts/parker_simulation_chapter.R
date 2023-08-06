@@ -319,14 +319,44 @@ simulationdata <- as.data.frame(rbind(sim1, sim2, sim3, sim4))
 # making a data frame binding these 4 simulations
 
 # selecting objects from this data of sim number 
-simulationdata$simulationnumber <- rep(c(1,2,3,4), each = 101)
+simulationdata$simulationnumber <- rep(c(1,2,3,4), each = 101) # 1,2,3,4 101 times
 # selecting objects from this data of time 
-simulationdata$time <- rep(1:101, times = 4)
+simulationdata$time <- rep(1:101, times = 4) # represents the time between 1 and 101 
 
-# runbning this simulation again to include the new info
-simulationdata
+# running this simulation again to include the new info
+simulationdata 
 
 library(gridExtra) # from dplyr 
 
 library(ggpubr)
+
+library(dplyr)
+
+# making a tibble of the data 
+simulationtibble <- tibble(simulationdata)
+                      
+# plotting the data 
+S1 <- simulationdata %>% 
+  filter(simulationnumber == 1) %>% 
+  ggplot(aes(x = time, y = S)) +
+  geom_line() + xlab("") + ylab("S(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+# plotting the data 
+I1 <- simulationdata %>% 
+  filter(simulationnumber == 1) %>% 
+  ggplot(aes(x = time, y = I)) +
+  geom_line() + xlab("") + ylab("I(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+# plotting the data 
+R1 <- simulationdata %>% 
+  filter(simulationnumber == 1) %>% 
+  ggplot(aes(x = time, y = R)) +
+  geom_line() + xlab("") + ylab("R(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+
+SIR1 <- ggarrange(S1, I1, R1, ncol = 1) # similar to patchwork,  combines plots
+
 
