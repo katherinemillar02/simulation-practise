@@ -475,5 +475,5 @@ combined_plots <- ggarrange(SIR1, SIR2, SIR3, SIR4, ncol = 2, nrow = 2)
 
 SIRsim_4_df <- data.frame(S=0, I = 0, R = 0, time = 0, simulationnumber = 0)
 for (i in 1:20) {
-  simulationdata <- rbind()
+  simulationdata <- rbind(SIRsim_4_df, cbind())
 }
