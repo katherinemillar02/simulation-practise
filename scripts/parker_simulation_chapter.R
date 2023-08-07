@@ -430,6 +430,8 @@ SIR3 <- annotate_figure(SIR3, top = "alpha = 0.0005 beta = 0.3")
 ggsave("figures/SIR3.png", type="cairo", width=12, height=7, units="in", dpi=600)
 
 # 4
+
+# suspectible 
 S4 <- simulationdata %>% 
   filter(simulationnumber == 4) %>% 
   ggplot(aes(x = time, y = S)) +
@@ -437,6 +439,7 @@ S4 <- simulationdata %>%
   ylim(c(0,1000))+
   theme_classic()
 
+# infected 
 I4 <- simulationdata %>% 
   filter(simulationnumber == 4) %>% 
   ggplot(aes(x = time, y = I)) +
@@ -444,6 +447,7 @@ I4 <- simulationdata %>%
   ylim(c(0,1000))+
   theme_classic()
 
+# recovered 
 R4 <- simulationdata %>% 
   filter(simulationnumber == 4) %>% 
   ggplot(aes(x = time, y = R)) +
@@ -451,12 +455,21 @@ R4 <- simulationdata %>%
   ylim(c(0,1000))+
   theme_classic()
 
+# combining these plots 
 SIR4 <- ggarrange(S4,I4,R4, ncol = 1)
 
+# annotating combined plot 
 SIR4 <- annotate_figure(SIR4, top = "alpha = 0.0005 beta = 0.4")
 
+# saving combined plots 
 ggsave("figures/SIR4.png", type="cairo", width=12, height=7, units="in", dpi=600)
 
-# COMBINING ALL COMBINED PLOTS 
+# COMBINING ALL COMBINED PLOTS
+# SIR and 1-4
 combined_plots <- ggarrange(SIR1, SIR2, SIR3, SIR4, ncol = 2, nrow = 2)
+
+
+# combining all these plots to see how 'behaviour' compares 
+# what we know from the plot
+# die out best is probs 0.4 
 
