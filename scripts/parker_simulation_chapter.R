@@ -472,8 +472,13 @@ combined_plots <- ggarrange(SIR1, SIR2, SIR3, SIR4, ncol = 2, nrow = 2)
 # combining all these plots to see how 'behaviour' compares 
 # what we know from the plot
 # die out best is probs 0.4, infected stays low suspectible goes down, recovered increases 
-
 SIRsim_4_df <- data.frame(S=0, I = 0, R = 0, time = 0, simulationnumber = 0)
 for (i in 1:20) {
-  simulationdata <- rbind(SIRsim_4_df, cbind())
+ SIRsim_4_df <- rbind(SIRsim_4_df, cbind(SIRsim(0.0005, 0.4, 1000, 100), time = 1:101,
+                                         simulationnumber = rep(i, 101)))
 }
+
+
+
+
+
