@@ -365,7 +365,9 @@ SIR1 <- annotate_figure(SIR1, top = "alpha = 0.0005 beta = 0.1")
 # saving figure 
 ggsave("figures/SIR1.png", type="cairo", width=12, height=7, units="in", dpi=600)
 
+# making plots based on the second section of data 
 
+# suspectible plot 2 
 S2 <- simulationdata %>% 
   filter(simulationnumber == 2) %>% 
   ggplot(aes(x = time, y = S)) +
@@ -373,6 +375,7 @@ S2 <- simulationdata %>%
   ylim(c(0,1000))+
   theme_classic()
 
+# infectious plot 2 
 I2 <- simulationdata %>% 
   filter(simulationnumber == 2) %>% 
   ggplot(aes(x = time, y = S)) +
@@ -380,6 +383,7 @@ I2 <- simulationdata %>%
   ylim(c(0,1000))+
   theme_classic()
 
+# recovered plot 2 
 R2 <- simulationdata %>% 
   filter(simulationnumber == 2) %>% 
   ggplot(aes(x = time, y = R)) +
@@ -387,7 +391,41 @@ R2 <- simulationdata %>%
   ylim(c(0,1000))+
   theme_classic()
 
+# combining these plots 
 SIR2 <- ggarrange(S2, I2, R2, ncol = 1)
 
+# adding a title to these plots 
 SIR2 <- annotate_figure(SIR2, top = "alpha = 0.0005 beta = 0.2" )
+
+# saving this plot
+ggsave("figures/SIR2.png", type="cairo", width=12, height=7, units="in", dpi=600)
+
+# column 3
+S3 <- simulationdata %>% 
+  filter(simulationnumber == 3) %>% 
+  ggplot(aes(x = time, y = S)) +
+  geom_line() + xlab("") + ylab("S(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+
+I3 <- simulationdata %>% 
+  filter(simulationnumber == 3) %>% 
+  ggplot(aes(x = time, y = I)) +
+  geom_line() + xlab("") + ylab("I(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+
+R3 <- simulationdata %>% 
+  filter(simulationnumber == 3) %>% 
+  ggplot(aes(x = time, y = R)) +
+  geom_line() + xlab("") + ylab("R(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+
+SIR3 <- ggarrange(S3, I3, R3, ncol = 1)
+
+SIR3 <- annotate_figure(SIR3, top = "alpha = 0.0005 beta = 0.3")
+
+# saving figure 
+ggsave("figures/SIR3.png", type="cairo", width=12, height=7, units="in", dpi=600)
 
