@@ -429,3 +429,34 @@ SIR3 <- annotate_figure(SIR3, top = "alpha = 0.0005 beta = 0.3")
 # saving figure 
 ggsave("figures/SIR3.png", type="cairo", width=12, height=7, units="in", dpi=600)
 
+# 4
+S4 <- simulationdata %>% 
+  filter(simulationnumber == 4) %>% 
+  ggplot(aes(x = time, y = S)) +
+  geom_line() + xlab("") + ylab("S(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+
+I4 <- simulationdata %>% 
+  filter(simulationnumber == 4) %>% 
+  ggplot(aes(x = time, y = I)) +
+  geom_line() + xlab("") + ylab("I(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+
+R4 <- simulationdata %>% 
+  filter(simulationnumber == 4) %>% 
+  ggplot(aes(x = time, y = R)) +
+  geom_line() + xlab("") + ylab("R(t)") +
+  ylim(c(0,1000))+
+  theme_classic()
+
+SIR4 <- ggarrange(S4,I4,R4, ncol = 1)
+
+SIR4 <- annotate_figure(SIR4, top = "alpha = 0.0005 beta = 0.4")
+
+ggsave("figures/SIR4.png", type="cairo", width=12, height=7, units="in", dpi=600)
+
+# COMBINING ALL COMBINED PLOTS 
+combined_plots <- ggarrange(SIR1, SIR2, SIR3, SIR4, ncol = 2, nrow = 2)
+
