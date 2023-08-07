@@ -484,21 +484,24 @@ for (i in 1:20) {
 # new sus
  S_plot <- ggplot( SIRsim_4_df, aes(x = time, y = S, group = simulationnumber)) + 
    geom_line(colour = "black") +
-   xlab ("")+ ylab("S(t)") + ylim(c(0,1000))
+   xlab ("")+ ylab("S(t)") + ylim(c(0,1000)) +
+   theme_classic()
 
  # new infectected 
  I_plot <- ggplot( SIRsim_4_df, aes(x = time, y = I, group = simulationnumber)) + 
    geom_line(colour = "black") +
-   xlab ("")+ ylab("I(t)") + ylim(c(0,1000))
+   xlab ("")+ ylab("I(t)") + ylim(c(0,1000)) +
+   theme_classic()
 
  # new recovered 
  R_plot <- ggplot( SIRsim_4_df, aes(x = time, y = R, group = simulationnumber)) + 
    geom_line(colour = "black") +
-   xlab ("")+ ylab("R(t)") + ylim(c(0,1000))
+   xlab ("")+ ylab("R(t)") + ylim(c(0,1000)) +
+   theme_classic()
 
  # combining all the plots together 
  plots_4 <- ggarrange(S_plot, I_plot, R_plot, ncol = 1) %>% 
-   annotate_figure(top = "alpha = 0.0005 beta = 0.4")
+   annotate_figure(top = "alpha = 0.0005 beta = 0.4") 
  
  # thinking why this data matters - how does alpha affected the score of beta... 
  
